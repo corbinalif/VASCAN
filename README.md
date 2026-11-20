@@ -92,21 +92,40 @@ flowchart LR
     end
 
     L["tables · figures ·<br/>models · reports"]
+    M["F · Consolidation<br/>S17–S18 (planned)"]
 
     A --> B --> C --> D --> E --> F
-    F --> G --> H --> I --> J --> K --> L
+    F --> G --> H --> I --> J --> K --> L --> M
 
     classDef src fill:#0092FF,stroke:#005BB5,color:#fff
     classDef build fill:#08C46A,stroke:#067A43,color:#fff
     classDef file fill:#8A2BE2,stroke:#5B1A99,color:#fff
     classDef nb fill:#FF9E00,stroke:#B86F00,color:#1a1a1a
     classDef out fill:#FF1B00,stroke:#A81200,color:#fff
+    classDef todo fill:#6E7781,stroke:#424A53,color:#fff,stroke-dasharray: 5 5
     class A src
     class B,C,D,E build
     class F file
     class G,H,I,J,K nb
     class L out
+    class M todo
 ```
+
+## Roadmap by phase
+
+The repository follows the phases of the [implementation plan](docs/PMHM_Implementation_Plan.pdf). Each folder has its own README with the steps, where they sit in the notebook, and what the first run found.
+
+| Phase | Steps | Folder | Status |
+|:--|:--|:--|:--|
+| **0** Data engineering | inventory → convert → validate → standalone | [`phase_0_data_engineering/`](phase_0_data_engineering/) | ![done](https://img.shields.io/badge/complete-2EA44F?style=flat-square) |
+| **A** Foundation | S0–S2 | [`phase_A-E_analysis/A_foundation/`](phase_A-E_analysis/A_foundation/) | ![done](https://img.shields.io/badge/complete-2EA44F?style=flat-square) |
+| **B** Signal conditioning | S3–S7 | [`phase_A-E_analysis/B_signal_conditioning/`](phase_A-E_analysis/B_signal_conditioning/) | ![done](https://img.shields.io/badge/complete-2EA44F?style=flat-square) |
+| **C** Features | S8–S9 | [`phase_A-E_analysis/C_features/`](phase_A-E_analysis/C_features/) | ![done](https://img.shields.io/badge/complete-2EA44F?style=flat-square) |
+| **D** Physiological response | S10–S12 | [`phase_A-E_analysis/D_physiological_response/`](phase_A-E_analysis/D_physiological_response/) | ![done](https://img.shields.io/badge/complete-2EA44F?style=flat-square) |
+| **E** Agreement and models | S13–S16 | [`phase_A-E_analysis/E_agreement_and_models/`](phase_A-E_analysis/E_agreement_and_models/) | ![partial](https://img.shields.io/badge/S13%E2%80%93S14%20done%2C%20S15%E2%80%93S16%20open-DBAB09?style=flat-square) |
+| **F** Consolidation | S17–S18 | [`phase_F_consolidation/`](phase_F_consolidation/) | ![todo](https://img.shields.io/badge/not%20started-6E7781?style=flat-square) |
+
+Phases A–E all run from the one notebook, [`phase_A-E_analysis/pmhm_phase_a_e.ipynb`](phase_A-E_analysis/pmhm_phase_a_e.ipynb).
 
 ## The protocol
 
@@ -199,7 +218,7 @@ With 25 Hz video, it's easy to leak information between neighbouring frames and 
 
 ## The dataset file
 
-`spectralpaca_pmhm_dataset.parquet` holds everything in one table. Each row has a `record_type`; filter on it first.
+[`data/spectralpaca_pmhm_dataset.parquet`](data/) holds everything in one table. Each row has a `record_type`; filter on it first.
 
 | `record_type` | Rows | One row is |
 |:--|--:|:--|
@@ -216,7 +235,7 @@ With 25 Hz video, it's easy to leak information between neighbouring frames and 
 ```python
 import pandas as pd
 
-f = "spectralpaca_pmhm_dataset.parquet"
+f = "data/spectralpaca_pmhm_dataset.parquet"
 
 # Camera ROI time series, empty columns dropped
 roi = pd.read_parquet(f, filters=[("record_type", "==", "roi_frame")]).dropna(axis=1, how="all")
@@ -226,7 +245,7 @@ spec = pd.read_parquet(f, filters=[("record_type", "==", "spectrometer"), ("subj
 wide = spec.pivot_table(index=["stage", "roi_id", "spectrum_index"], columns="wavelength_nm", values="value")
 ```
 
-It works the same way in polars, DuckDB or R's `arrow`. Every column is documented in [`pmhm_project_backup/docs/STANDALONE_DATASET.md`](pmhm_project_backup/docs/STANDALONE_DATASET.md).
+It works the same way in polars, DuckDB or R's `arrow`. Every column is documented in [`STANDALONE_DATASET.md`](phase_0_data_engineering/pmhm_project_backup/docs/STANDALONE_DATASET.md).
 
 | Coverage | Camera ROI spectra | Spectrometer |
 |:--|:-:|:-:|
@@ -246,9 +265,12 @@ It works the same way in polars, DuckDB or R's `arrow`. Every column is document
 ```bash
 git clone https://github.com/corbinalif/VASCAN.git
 cd VASCAN
-pip install -r pmhm_project_backup/requirements-pmhm.txt
+pip install -r phase_0_data_engineering/pmhm_project_backup/requirements-pmhm.txt
+cd phase_A-E_analysis
 jupyter lab pmhm_phase_a_e.ipynb
 ```
+
+Run locally, the notebook reads `../data/spectralpaca_pmhm_dataset.parquet`, and searches the repository if the file isn't there.
 
 **On Colab or Kaggle,** put the Parquet file at `MyDrive/PMHM/` (Colab) or attach it as a Kaggle dataset. The notebook detects where it is running.
 
@@ -261,7 +283,7 @@ RESUME = True            # reuse cached steps when the configuration hash matche
 DEVICE = "auto"          # "cpu" | "cuda"
 ```
 
-A full run took about 13 minutes on a CPU. Results go to `pmhm_outputs/`: `tables/`, `figures/`, `models/`, `predictions/`, a frozen `analysis_plan/`, and a Markdown report with a machine-readable JSON summary.
+A full run took about 13 minutes on a CPU. Results go to `phase_A-E_analysis/pmhm_outputs/`: `tables/`, `figures/`, `models/`, `predictions/`, a frozen `analysis_plan/`, and a Markdown report with a machine-readable JSON summary.
 
 <details>
 <summary><b>Rebuilding the Parquet file from the raw data</b></summary>
@@ -270,7 +292,7 @@ A full run took about 13 minutes on a CPU. Results go to `pmhm_outputs/`: `table
 You only need this if you want to reproduce the conversion. It needs the full SPECTRALPACA download from Synapse (`syn51625685`), which is about 250 GB.
 
 ```bash
-cd pmhm_project_backup
+cd phase_0_data_engineering/pmhm_project_backup
 python scripts/pmhm_build_dataset.py all   # inventory → convert → validate → standalone → card
 pytest tests/
 ```
@@ -283,19 +305,27 @@ Each stage can also be run on its own: `inventory`, `convert`, `validate`, `stan
 
 ```
 VASCAN/
-├── spectralpaca_pmhm_dataset.parquet   the whole dataset, one file (59 MB)
-├── pmhm_phase_a_e.ipynb                analysis notebook, steps S0–S14
-├── PMHM_Research_Proposal.pdf          proposal v1.0
-├── PMHM_Research_Proposal_v2.pdf       proposal v2.0, with first-run results
-├── PMHM_Implementation_Plan.pdf        step-by-step implementation plan
-├── pmhm_project_backup/                code that built the dataset
-│   ├── src/pmhm/                         inventory, convert, validate, standalone, card
-│   ├── scripts/pmhm_build_dataset.py     command-line entry point
-│   ├── tests/                            unit tests
-│   ├── configs/pmhm.yaml                 pipeline configuration
-│   ├── docs/                             data dictionary, dataset card, design decisions
-│   └── reports/                          validation reports
-└── pmhm_project_backup.zip             zipped copy of the folder above
+├── README.md
+├── docs/                                   proposal and plan
+│   ├── PMHM_Research_Proposal.pdf            v1.0
+│   ├── PMHM_Research_Proposal_v2.pdf         v2.0, with first-run results
+│   └── PMHM_Implementation_Plan.pdf          steps S0–S18, phases A–F
+├── data/
+│   └── spectralpaca_pmhm_dataset.parquet   the whole dataset, one file (59 MB)
+├── phase_0_data_engineering/               raw release → validated Parquet
+│   ├── pmhm_project_backup/                  pipeline code, docs, validation reports, logs
+│   │   ├── src/pmhm/                           inventory, convert, validate, standalone, card
+│   │   ├── scripts/pmhm_build_dataset.py       command-line entry point
+│   │   ├── tests/  configs/  docs/  reports/
+│   └── pmhm_project_backup.zip               archived copy of the folder above
+├── phase_A-E_analysis/
+│   ├── pmhm_phase_a_e.ipynb                  one notebook for S0–S14 (+ gated S15)
+│   ├── A_foundation/                         S0–S2
+│   ├── B_signal_conditioning/                S3–S7
+│   ├── C_features/                           S8–S9
+│   ├── D_physiological_response/             S10–S12
+│   └── E_agreement_and_models/               S13–S16
+└── phase_F_consolidation/                  S17–S18, not started
 ```
 
 ## Limits worth knowing
