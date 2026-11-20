@@ -1,0 +1,226 @@
+{
+  "validated_utc": "2026-11-14T17:29:17Z",
+  "file": "data/processed/spectralpaca_pmhm_dataset.parquet",
+  "sha256": "eb77b66a76f27eab5a053fe564954d9fe4ef584423f1053cb46542ac38961226",
+  "bytes": 59329808,
+  "rows": 4586255,
+  "record_counts": {
+    "roi_frame": 125323,
+    "frame": 48157,
+    "spectrometer": 4397250,
+    "camera_filter": 9616,
+    "light_source": 2033,
+    "color_checker": 3840,
+    "channel": 16,
+    "stage": 10,
+    "subject": 10
+  },
+  "n_checks": 23,
+  "n_passed": 22,
+  "n_warn": 1,
+  "n_failed": 0,
+  "checks": [
+    {
+      "table": "standalone",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "81 columns"
+    },
+    {
+      "table": "standalone",
+      "check": "column_docs_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "standalone",
+      "check": "file_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "standalone",
+      "check": "rows[roi_frame]_equal_master_rois",
+      "status": "pass",
+      "detail": "125323 vs 125323"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[frame]_equal_master_frames",
+      "status": "pass",
+      "detail": "48157 vs 48157"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[spectrometer]_equal_master_spectrometer",
+      "status": "pass",
+      "detail": "4397250 vs 4397250"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[camera_filter]_equal_optics_ximea_filters",
+      "status": "pass",
+      "detail": "9616 vs 9616"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[light_source]_equal_optics_xenon_light_source",
+      "status": "pass",
+      "detail": "2033 vs 2033"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[color_checker]_equal_color_checker_spectrometer_adapted",
+      "status": "pass",
+      "detail": "3840 vs 3840"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[channel]_equal_ref_channels",
+      "status": "pass",
+      "detail": "16 vs 16"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[stage]_equal_ref_stages",
+      "status": "pass",
+      "detail": "10 vs 10"
+    },
+    {
+      "table": "standalone",
+      "check": "rows[subject]_equal_ref_subjects",
+      "status": "pass",
+      "detail": "10 vs 10"
+    },
+    {
+      "table": "standalone",
+      "check": "no_unknown_record_types",
+      "status": "pass",
+      "detail": "['camera_filter', 'channel', 'color_checker', 'frame', 'light_source', 'roi_frame', 'spectrometer', 'stage', 'subject']"
+    },
+    {
+      "table": "standalone",
+      "check": "each_row_group_single_record_type",
+      "status": "pass",
+      "detail": "96 row groups"
+    },
+    {
+      "table": "standalone",
+      "check": "spectrometer_values_identical",
+      "status": "pass",
+      "detail": "80 row groups compared"
+    },
+    {
+      "table": "standalone",
+      "check": "roi_rows_match_master_rois_1to1",
+      "status": "pass",
+      "detail": "{'both': 125323, 'left_only': 0, 'right_only': 0}"
+    },
+    {
+      "table": "standalone",
+      "check": "roi_coordinates_time_frame_identical",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "standalone",
+      "check": "spectral_values_present_iff_image_frame",
+      "status": "pass",
+      "detail": "123527 with values, 1796 without (tracked after cube end)"
+    },
+    {
+      "table": "standalone",
+      "check": "roi_spectra_recomputed_from_cube",
+      "status": "pass",
+      "detail": "400 random ROI-frames re-extracted via full-frame read; max relative diff 5.88e-08"
+    },
+    {
+      "table": "standalone",
+      "check": "provenance_present[frame]",
+      "status": "pass",
+      "detail": "0 null source_file"
+    },
+    {
+      "table": "standalone",
+      "check": "provenance_present[subject]",
+      "status": "warn",
+      "detail": "2 null source_file (subjects with no cube in the download)"
+    },
+    {
+      "table": "standalone",
+      "check": "provenance_present[stage]",
+      "status": "pass",
+      "detail": "0 null source_file"
+    },
+    {
+      "table": "standalone",
+      "check": "provenance_present[channel]",
+      "status": "pass",
+      "detail": "0 null source_file"
+    }
+  ],
+  "build": {
+    "file": "spectralpaca_pmhm_dataset.parquet",
+    "rows": 4586255,
+    "row_groups": 96,
+    "bytes": 59329808,
+    "path": "data/processed/spectralpaca_pmhm_dataset.parquet",
+    "sha256": "eb77b66a76f27eab5a053fe564954d9fe4ef584423f1053cb46542ac38961226",
+    "record_counts": {
+      "roi_frame": 125323,
+      "frame": 48157,
+      "spectrometer": 4397250,
+      "camera_filter": 9616,
+      "light_source": 2033,
+      "color_checker": 3840,
+      "channel": 16,
+      "stage": 10,
+      "subject": 10
+    },
+    "roi_extraction": {
+      "subject_01/roi_1": {
+        "rows": 17836,
+        "patches_extracted": 17576,
+        "seconds": 11.1
+      },
+      "subject_01/roi_2": {
+        "rows": 17836,
+        "patches_extracted": 17576,
+        "seconds": 19.6
+      },
+      "subject_01/roi_3": {
+        "rows": 17836,
+        "patches_extracted": 17576,
+        "seconds": 13.6
+      },
+      "subject_01/roi_4": {
+        "rows": 17836,
+        "patches_extracted": 17576,
+        "seconds": 9.8
+      },
+      "subject_02/roi_1": {
+        "rows": 17993,
+        "patches_extracted": 17741,
+        "seconds": 13.3
+      },
+      "subject_02/roi_2": {
+        "rows": 17993,
+        "patches_extracted": 17741,
+        "seconds": 14.1
+      },
+      "subject_02/roi_3": {
+        "rows": 17993,
+        "patches_extracted": 17741,
+        "seconds": 11.1
+      }
+    },
+    "elapsed_s": 97.3,
+    "resources": {
+      "ram_available_mb": 2388.4,
+      "ram_used_pct": 69.4,
+      "swap_used_mb": 5348.2,
+      "process_rss_mb": 375.3,
+      "disk_free_gb": 207.7
+    }
+  }
+}

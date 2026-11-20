@@ -1,0 +1,24 @@
+source,format,table,subject_id,source_rows,rows_written,status,notes,roi_id,rows_matched_to_frame,rows_without_frame,alternate_copy
+data/ximea/subject_01.b2nd,b2nd(meta only),master_frames,subject_01,17576.0,17576.0,converted,"cube (17576, 272, 512, 16) float16 kept native",,,,
+data/ximea/subject_02.b2nd,b2nd(meta only),master_frames,subject_02,17741.0,17741.0,converted,"cube (17741, 272, 512, 16) float16 kept native",,,,
+data/ximea/subject_04.b2nd,b2nd(meta only),master_frames,subject_04,12840.0,12840.0,converted,"cube (12840, 272, 512, 16) float16 kept native",,,,
+intermediates/rois/subject_01/roi_1.csv,csv,master_rois,subject_01,17836.0,17836.0,converted,,1.0,17576.0,260.0,
+intermediates/rois/subject_01/roi_2.feather,feather,master_rois,subject_01,17836.0,17836.0,converted,,2.0,17576.0,260.0,
+intermediates/rois/subject_01/roi_3.csv,csv,master_rois,subject_01,17836.0,17836.0,converted,,3.0,17576.0,260.0,intermediates/rois/subject_01/roi_3.feather
+intermediates/rois/subject_01/roi_4.feather,feather,master_rois,subject_01,17836.0,17836.0,converted,,4.0,17576.0,260.0,
+intermediates/rois/subject_02/roi_1.csv,csv,master_rois,subject_02,17993.0,17993.0,converted,,1.0,17741.0,252.0,intermediates/rois/subject_02/roi_1.feather
+intermediates/rois/subject_02/roi_2.csv,csv,master_rois,subject_02,17993.0,17993.0,converted,,2.0,17741.0,252.0,intermediates/rois/subject_02/roi_2.feather
+intermediates/rois/subject_02/roi_3.csv,csv,master_rois,subject_02,17993.0,17993.0,converted,,3.0,17741.0,252.0,intermediates/rois/subject_02/roi_3.feather
+data/spectrometer/spectrometer.csv,csv,master_spectrometer,all,4397250.0,4397250.0,converted,"80 (subject,stage,ROI) groups; 550 wavelengths",,,,data/spectrometer/spectrometer.feather
+intermediates/optics/ximea_filters.csv,csv,optics_ximea_filters,,9616.0,9616.0,converted,,,,,intermediates/optics/ximea_filters.feather
+intermediates/optics/xenon_light_source.csv,csv,optics_xenon_light_source,,2033.0,2033.0,converted,,,,,intermediates/optics/xenon_light_source.feather
+intermediates/color_checker/spectrometer_adapted.csv,csv,color_checker_spectrometer_adapted,,3840.0,3840.0,converted,,,,,intermediates/color_checker/spectrometer_adapted.feather
+intermediates/color_checker/ximea_raw.b2nd,b2nd(meta only),color_checker_frames,,240.0,240.0,converted,"cube shape (240, 100, 100, 16) float16 kept native",,,,
+intermediates/color_checker/ximea_norm.b2nd,b2nd(meta only),color_checker_frames,,240.0,240.0,converted,"cube shape (240, 100, 100, 16) float16 kept native",,,,
+data/ximea/subject_03.b2nd.synapse_download_132463951,partial,,,,,skipped_incomplete_download,,,,,
+data/ximea/subject_05.b2nd.synapse_download_132463953,partial,,,,,skipped_incomplete_download,,,,,
+data/ximea/subject_07.b2nd.synapse_download_132463955,partial,,,,,skipped_incomplete_download,,,,,
+data/ximea/subject_08.b2nd.synapse_download_132463956,partial,,,,,skipped_incomplete_download,,,,,
+data/ximea/subject_10.b2nd.synapse_download_132463958,partial,,,,,skipped_incomplete_download,,,,,
+intermediates/color_checker/spectrometer.csv.synapse_download_132465380,partial,,,,,skipped_incomplete_download,,,,,
+data/ximea/dark.b2nd,b2nd,ref_channels(summary stats),,,,kept_native,2-D calibration array; per-channel stats only,,,,

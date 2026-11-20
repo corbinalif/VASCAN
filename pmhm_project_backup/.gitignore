@@ -1,0 +1,18 @@
+# Raw dataset (immutable, 82 GB) and generated data — never commit
+data/ximea/
+data/spectrometer/
+intermediates/
+data/processed/
+*.b2nd
+*.synapse_download_*
+assets/animation.gif
+
+# Contains a plaintext Synapse access token — keep out of version control
+spectralpaca.ipynb
+code/.env
+.env
+
+logs/
+__pycache__/
+.pytest_cache/
+*.parquet.tmp

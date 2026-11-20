@@ -1,0 +1,452 @@
+{
+  "generated_utc": "2026-11-14T17:03:00Z",
+  "dataset_root": "/home/alifhossain/SPECTRALPACA",
+  "n_files": 48,
+  "total_bytes": 86201765586,
+  "expected_items": [
+    {
+      "item": "data/ximea/subject_01.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_01",
+      "status": "present"
+    },
+    {
+      "item": "data/ximea/subject_01/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_01",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_01/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_01",
+      "status": "present:csv"
+    },
+    {
+      "item": "intermediates/rois/subject_01/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_01",
+      "status": "present:feather"
+    },
+    {
+      "item": "intermediates/rois/subject_01/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_01",
+      "status": "present:csv+feather"
+    },
+    {
+      "item": "intermediates/rois/subject_01/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_01",
+      "status": "present:feather"
+    },
+    {
+      "item": "intermediates/rois/subject_01/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_01",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_02.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_02",
+      "status": "present"
+    },
+    {
+      "item": "data/ximea/subject_02/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_02",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_02/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_02",
+      "status": "present:csv+feather"
+    },
+    {
+      "item": "intermediates/rois/subject_02/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_02",
+      "status": "present:csv+feather"
+    },
+    {
+      "item": "intermediates/rois/subject_02/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_02",
+      "status": "present:csv+feather"
+    },
+    {
+      "item": "intermediates/rois/subject_02/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_02",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_02/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_02",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_03.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_03",
+      "status": "partial_download"
+    },
+    {
+      "item": "data/ximea/subject_03/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_03",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_03/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_03",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_03/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_03",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_03/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_03",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_03/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_03",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_03/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_03",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_04.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_04",
+      "status": "present"
+    },
+    {
+      "item": "data/ximea/subject_04/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_04",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_04/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_04",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_04/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_04",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_04/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_04",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_04/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_04",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_04/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_04",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_05.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_05",
+      "status": "partial_download"
+    },
+    {
+      "item": "data/ximea/subject_05/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_05",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_05/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_05",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_05/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_05",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_05/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_05",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_05/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_05",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_05/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_05",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_06.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_06",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_06/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_06",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_06/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_06",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_06/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_06",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_06/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_06",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_06/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_06",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_06/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_06",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_07.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_07",
+      "status": "partial_download"
+    },
+    {
+      "item": "data/ximea/subject_07/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_07",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_07/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_07",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_07/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_07",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_07/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_07",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_07/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_07",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_07/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_07",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_08.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_08",
+      "status": "partial_download"
+    },
+    {
+      "item": "data/ximea/subject_08/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_08",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_08/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_08",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_08/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_08",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_08/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_08",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_08/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_08",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_08/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_08",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_09.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_09",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_09/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_09",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_09/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_09",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_09/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_09",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_09/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_09",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_09/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_09",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_09/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_09",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/subject_10.b2nd",
+      "kind": "hsi_cube",
+      "subject_id": "subject_10",
+      "status": "partial_download"
+    },
+    {
+      "item": "data/ximea/subject_10/metadata.json",
+      "kind": "subject_metadata_json",
+      "subject_id": "subject_10",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_10/roi_1.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_10",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_10/roi_2.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_10",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_10/roi_3.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_10",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_10/roi_4.(csv|feather)",
+      "kind": "roi_track",
+      "subject_id": "subject_10",
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/rois/subject_10/roi_tracking_rgb.mp4",
+      "kind": "roi_video",
+      "subject_id": "subject_10",
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/white.npy|white.b2nd",
+      "kind": "white_reference",
+      "subject_id": NaN,
+      "status": "missing"
+    },
+    {
+      "item": "data/ximea/dark.npy|dark.b2nd",
+      "kind": "dark_reference",
+      "subject_id": NaN,
+      "status": "present"
+    },
+    {
+      "item": "code/src/data/*.py (DataLoaderXIMEA)",
+      "kind": "loader_code",
+      "subject_id": NaN,
+      "status": "missing"
+    },
+    {
+      "item": "intermediates/color_checker/spectrometer.csv",
+      "kind": "color_checker_spectrometer",
+      "subject_id": NaN,
+      "status": "partial_download"
+    }
+  ]
+}

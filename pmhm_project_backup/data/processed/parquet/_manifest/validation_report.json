@@ -1,0 +1,887 @@
+{
+  "validated_utc": "2026-11-14T17:03:48Z",
+  "output_dir": "data/processed/parquet",
+  "subjects": "all",
+  "n_checks": 131,
+  "n_passed": 130,
+  "n_warn": 1,
+  "n_failed": 0,
+  "checks": [
+    {
+      "table": "master_rois",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "27 columns"
+    },
+    {
+      "table": "master_rois",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_rois",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_rois",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "master_rois",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "125323 vs 125323"
+    },
+    {
+      "table": "master_rois",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_rois",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "125323 vs 125323"
+    },
+    {
+      "table": "master_rois",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "11 sources verified"
+    },
+    {
+      "table": "master_frames",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "13 columns"
+    },
+    {
+      "table": "master_frames",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "master_frames",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "48157 vs 48157"
+    },
+    {
+      "table": "master_frames",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "48157 vs 48157"
+    },
+    {
+      "table": "master_frames",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "0 sources verified"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "14 columns"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "4397250 vs 4397250"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "80 row groups, 80 distinct (subject,stage,ROI), 0 duplicate keys"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "1 sources verified"
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "8 columns"
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "9616 vs 9616"
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "9616 vs 9616"
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "1 sources verified"
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "5 columns"
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "2033 vs 2033"
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "2033 vs 2033"
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "1 sources verified"
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "8 columns"
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "3840 vs 3840"
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "3840 vs 3840"
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "1 sources verified"
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "6 columns"
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "480 vs 480"
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "480 vs 480"
+    },
+    {
+      "table": "color_checker_frames",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "0 sources verified"
+    },
+    {
+      "table": "ref_channels",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "13 columns"
+    },
+    {
+      "table": "ref_channels",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_channels",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_channels",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "ref_channels",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "16 vs 16"
+    },
+    {
+      "table": "ref_channels",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_channels",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "16 vs 16"
+    },
+    {
+      "table": "ref_channels",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "3 sources verified"
+    },
+    {
+      "table": "ref_stages",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "6 columns"
+    },
+    {
+      "table": "ref_stages",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_stages",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_stages",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "ref_stages",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "10 vs 10"
+    },
+    {
+      "table": "ref_stages",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_stages",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "10 vs 10"
+    },
+    {
+      "table": "ref_stages",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "1 sources verified"
+    },
+    {
+      "table": "ref_subjects",
+      "check": "schema_matches_spec",
+      "status": "pass",
+      "detail": "14 columns"
+    },
+    {
+      "table": "ref_subjects",
+      "check": "column_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_subjects",
+      "check": "table_metadata_embedded",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_subjects",
+      "check": "no_nulls_in_required_columns",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "table": "ref_subjects",
+      "check": "row_count_matches_catalog",
+      "status": "pass",
+      "detail": "10 vs 10"
+    },
+    {
+      "table": "ref_subjects",
+      "check": "sha256_matches_catalog",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "ref_subjects",
+      "check": "primary_key_unique",
+      "status": "pass",
+      "detail": "10 vs 10"
+    },
+    {
+      "table": "ref_subjects",
+      "check": "raw_sources_unchanged_since_conversion",
+      "status": "pass",
+      "detail": "1 sources verified"
+    },
+    {
+      "table": "master_frames",
+      "check": "rowcount_vs_cube_frames[subject_01]",
+      "status": "pass",
+      "detail": "17576 vs 17576"
+    },
+    {
+      "table": "master_frames",
+      "check": "values_identical_to_cube_meta[subject_01]",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "time_monotonic[subject_01]",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "rowcount_vs_cube_frames[subject_02]",
+      "status": "pass",
+      "detail": "17741 vs 17741"
+    },
+    {
+      "table": "master_frames",
+      "check": "values_identical_to_cube_meta[subject_02]",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "time_monotonic[subject_02]",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "rowcount_vs_cube_frames[subject_04]",
+      "status": "pass",
+      "detail": "12840 vs 12840"
+    },
+    {
+      "table": "master_frames",
+      "check": "values_identical_to_cube_meta[subject_04]",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "time_monotonic[subject_04]",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_rois",
+      "check": "rowcount[subject_01/roi_1]",
+      "status": "pass",
+      "detail": "17836 vs 17836"
+    },
+    {
+      "table": "master_rois",
+      "check": "values_identical_to_source[subject_01/roi_1]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_01/roi_1.csv"
+    },
+    {
+      "table": "master_rois",
+      "check": "rowcount[subject_01/roi_2]",
+      "status": "pass",
+      "detail": "17836 vs 17836"
+    },
+    {
+      "table": "master_rois",
+      "check": "values_identical_to_source[subject_01/roi_2]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_01/roi_2.feather"
+    },
+    {
+      "table": "master_rois",
+      "check": "rowcount[subject_01/roi_3]",
+      "status": "pass",
+      "detail": "17836 vs 17836"
+    },
+    {
+      "table": "master_rois",
+      "check": "values_identical_to_source[subject_01/roi_3]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_01/roi_3.csv"
+    },
+    {
+      "table": "master_rois",
+      "check": "csv_feather_copies_identical[subject_01/roi_3]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_01/roi_3.feather"
+    },
+    {
+      "table": "master_rois",
+      "check": "rowcount[subject_01/roi_4]",
+      "status": "pass",
+      "detail": "17836 vs 17836"
+    },
+    {
+      "table": "master_rois",
+      "check": "values_identical_to_source[subject_01/roi_4]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_01/roi_4.feather"
+    },
+    {
+      "table": "master_rois",
+      "check": "rowcount[subject_02/roi_1]",
+      "status": "pass",
+      "detail": "17993 vs 17993"
+    },
+    {
+      "table": "master_rois",
+      "check": "values_identical_to_source[subject_02/roi_1]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_02/roi_1.csv"
+    },
+    {
+      "table": "master_rois",
+      "check": "csv_feather_copies_identical[subject_02/roi_1]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_02/roi_1.feather"
+    },
+    {
+      "table": "master_rois",
+      "check": "rowcount[subject_02/roi_2]",
+      "status": "pass",
+      "detail": "17993 vs 17993"
+    },
+    {
+      "table": "master_rois",
+      "check": "values_identical_to_source[subject_02/roi_2]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_02/roi_2.csv"
+    },
+    {
+      "table": "master_rois",
+      "check": "csv_feather_copies_identical[subject_02/roi_2]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_02/roi_2.feather"
+    },
+    {
+      "table": "master_rois",
+      "check": "rowcount[subject_02/roi_3]",
+      "status": "pass",
+      "detail": "17993 vs 17993"
+    },
+    {
+      "table": "master_rois",
+      "check": "values_identical_to_source[subject_02/roi_3]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_02/roi_3.csv"
+    },
+    {
+      "table": "master_rois",
+      "check": "csv_feather_copies_identical[subject_02/roi_3]",
+      "status": "pass",
+      "detail": "intermediates/rois/subject_02/roi_3.feather"
+    },
+    {
+      "table": "master_rois",
+      "check": "rows_equal_sum_of_sources",
+      "status": "pass",
+      "detail": "125323 vs 125323"
+    },
+    {
+      "table": "master_rois",
+      "check": "frame_join_exact",
+      "status": "pass",
+      "detail": "123527 matched rows"
+    },
+    {
+      "table": "master_rois",
+      "check": "unmatched_rows_are_after_cube_end",
+      "status": "pass",
+      "detail": "1796 rows tracked after last cube frame (kept, frame_index=null)"
+    },
+    {
+      "table": "master_rois",
+      "check": "derived_bbox_consistent",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_frames",
+      "check": "n_rois_tracked_consistent",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "master_rois",
+      "check": "bbox_within_image",
+      "status": "pass",
+      "detail": "0 out-of-bounds boxes"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "every_row_identical_to_csv",
+      "status": "pass",
+      "detail": "4,397,250 rows compared, 0 mismatching chunks, 0 extra parquet rows"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "rowcount_vs_csv",
+      "status": "pass",
+      "detail": "4397250 vs 4397250"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "rowcount_vs_independent_line_count",
+      "status": "pass",
+      "detail": "4397250 vs 4397250"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "identical_to_feather_copy",
+      "status": "pass",
+      "detail": "data/spectrometer/spectrometer.feather"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "every_spectrum_has_full_wavelength_grid",
+      "status": "pass",
+      "detail": "7995 spectra, 0 incomplete"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "replicate_order_coherent(min adjacent-wl corr across groups)",
+      "status": "pass",
+      "detail": "min 0.973, median 0.998 over 80 groups"
+    },
+    {
+      "table": "master_spectrometer",
+      "check": "negative_reflectance_values",
+      "status": "warn",
+      "detail": "14,705 rows < 0 (kept unmodified; flagged)"
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "rowcount_vs_source",
+      "status": "pass",
+      "detail": "9616 vs 9616"
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "values_identical_to_csv",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_ximea_filters",
+      "check": "values_identical_to_feather_copy(atol 1e-12)",
+      "status": "pass",
+      "detail": "1414 float values differ in last digits (max 1.0e-16; CSV text rounding)"
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "rowcount_vs_source",
+      "status": "pass",
+      "detail": "2033 vs 2033"
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "values_identical_to_csv",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "optics_xenon_light_source",
+      "check": "values_identical_to_feather_copy(atol 1e-12)",
+      "status": "pass",
+      "detail": "0 float values differ in last digits (max 0.0e+00; CSV text rounding)"
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "rowcount_vs_source",
+      "status": "pass",
+      "detail": "3840 vs 3840"
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "values_identical_to_csv",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "table": "color_checker_spectrometer_adapted",
+      "check": "values_identical_to_feather_copy(atol 1e-12)",
+      "status": "pass",
+      "detail": "0 float values differ in last digits (max 0.0e+00; CSV text rounding)"
+    },
+    {
+      "table": "ref_channels",
+      "check": "filter_peak_within_3nm_of_nominal",
+      "status": "pass",
+      "detail": "max |diff| 2 nm"
+    },
+    {
+      "table": "ref_channels",
+      "check": "colorchecker_band_mapping_matches_nominal",
+      "status": "pass",
+      "detail": ""
+    }
+  ],
+  "quality_findings": {
+    "timeline_gaps_over_1s": [
+      {
+        "subject_id": "subject_01",
+        "stage_block_index": 1,
+        "stage": "during_clamping_20mmHg",
+        "time_delta_s": 159.027,
+        "frame_interval_s": 35.376
+      },
+      {
+        "subject_id": "subject_02",
+        "stage_block_index": 1,
+        "stage": "during_clamping_20mmHg",
+        "time_delta_s": 154.306,
+        "frame_interval_s": 29.814
+      },
+      {
+        "subject_id": "subject_02",
+        "stage_block_index": 4,
+        "stage": "during_clamping_0mmHg",
+        "time_delta_s": 343.262,
+        "frame_interval_s": 2.761
+      },
+      {
+        "subject_id": "subject_04",
+        "stage_block_index": 1,
+        "stage": "during_clamping_20mmHg",
+        "time_delta_s": 146.94,
+        "frame_interval_s": 24.658
+      }
+    ],
+    "frame_interval_median_s": {
+      "subject_01": 0.04,
+      "subject_02": 0.04,
+      "subject_04": 0.083
+    },
+    "roi_displacement_px": [
+      {
+        "subject_id": "subject_01",
+        "roi_id": 1,
+        "mean": 0.09799999743700027,
+        "max": 3.1619999408721924
+      },
+      {
+        "subject_id": "subject_01",
+        "roi_id": 2,
+        "mean": 0.07999999821186066,
+        "max": 3.1619999408721924
+      },
+      {
+        "subject_id": "subject_01",
+        "roi_id": 3,
+        "mean": 0.07999999821186066,
+        "max": 3.1619999408721924
+      },
+      {
+        "subject_id": "subject_01",
+        "roi_id": 4,
+        "mean": 0.07999999821186066,
+        "max": 3.1619999408721924
+      },
+      {
+        "subject_id": "subject_02",
+        "roi_id": 1,
+        "mean": 0.06599999964237213,
+        "max": 1.4140000343322754
+      },
+      {
+        "subject_id": "subject_02",
+        "roi_id": 2,
+        "mean": 0.057999998331069946,
+        "max": 1.4140000343322754
+      },
+      {
+        "subject_id": "subject_02",
+        "roi_id": 3,
+        "mean": 0.052000001072883606,
+        "max": 1.4140000343322754
+      }
+    ],
+    "roi_rows_without_frame": 1796,
+    "xenon_negative_irradiance_rows": 491
+  },
+  "resources": {
+    "ram_available_mb": 684.0,
+    "ram_used_pct": 91.2,
+    "swap_used_mb": 6502.6,
+    "process_rss_mb": 646.8,
+    "disk_free_gb": 207.6
+  }
+}

@@ -1,0 +1,115 @@
+table,column,type,nullable,unit,origin,description
+master_rois,subject_id,string,False,,source_path,Canonical subject identifier 'subject_NN' (matches cube file and ROI folder names).
+master_rois,roi_id,int8,False,,source_path,ROI number N from file name roi_N.(csv|feather).
+master_rois,source_row_index,int32,False,,provenance,0-based data-row position in the raw source file (header excluded).
+master_rois,frame_index,int32,True,,joined,"Index along axis 0 of the subject cube, matched exactly on (stage, time_delta). Null when the tracked time point has no cube frame (tracking continues ~20 s past the 1100 s cube end) or the cube is not available locally."
+master_rois,stage,string,False,,source:stage,Experimental stage label as written in the raw data (before_clamping | during_clamping_<P>mmHg).
+master_rois,time_delta_s,double,False,s,source:time_delta,Time since start of recording.
+master_rois,y1,int64,False,px,source:y1,Top row of the ROI box (cube row coordinate).
+master_rois,x1,int64,False,px,source:x1,Left column of the ROI box.
+master_rois,y2,int64,False,px,source:y2,Bottom row (exclusive slice end) of the ROI box.
+master_rois,x2,int64,False,px,source:x2,Right column (exclusive slice end) of the ROI box.
+master_rois,bbox_width_px,int32,False,px,derived,x2 - x1.
+master_rois,bbox_height_px,int32,False,px,derived,y2 - y1.
+master_rois,center_x_px,float,False,px,derived,(x1 + x2) / 2.
+master_rois,center_y_px,float,False,px,derived,(y1 + y2) / 2.
+master_rois,displacement_px,float,True,px,derived,Euclidean displacement of the ROI centre from the previous row of the same ROI (motion / tracking-consistency indicator). Null for the first row.
+master_rois,bbox_in_image_bounds,bool,False,,derived,True when 0 <= x1 < x2 <= image width and 0 <= y1 < y2 <= image height (272 x 512).
+master_rois,pressure_mmhg,int16,False,mmHg,derived,Upper-arm cuff pressure parsed from stage label; 0 for baseline and rest periods.
+master_rois,phase,string,False,,derived,baseline = before_clamping; clamping = cuff pressure > 0; rest = during_clamping_0mmHg (no-pressure recovery period recorded between clamping stages).
+master_rois,stage_block_index,int16,False,,derived,"0-based index of the contiguous stage segment in the session timeline (0 = baseline, 1 = 20 mmHg, 2 = rest, 3 = 40 mmHg, ...). Distinguishes the eight separate rest periods."
+master_rois,preceding_pressure_mmhg,int16,True,mmHg,derived,For rest blocks: pressure of the clamping block immediately before (reperfusion context). Null for baseline and clamping blocks.
+master_rois,time_in_block_s,double,False,s,derived,time_delta_s minus time_delta_s of the first row of the same stage block.
+master_rois,exposure_ms,int16,True,ms,joined,Camera exposure of the matched frame (cube metadata).
+master_rois,has_image_frame,bool,False,,joined,True when frame_index is not null.
+master_rois,image_file,string,False,,provenance,Dataset-relative path of the hyperspectral cube (.b2nd) that holds the frame.
+master_rois,image_locally_available,bool,False,,joined,True when the complete cube file for this subject exists locally.
+master_rois,source_file,string,False,,provenance,Dataset-relative path of the raw source file.
+master_rois,source_format,string,False,,provenance,csv or feather: which raw copy was read (CSV preferred; feather used when no CSV exists).
+master_frames,subject_id,string,False,,source_path,Canonical subject identifier 'subject_NN' (matches cube file and ROI folder names).
+master_frames,frame_index,int32,False,,provenance,Index along axis 0 of the cube.
+master_frames,stage,string,False,,cube_meta:stage,Stage label stored per frame in the cube.
+master_frames,time_delta_s,double,False,s,cube_meta:time_delta,Time since start of recording.
+master_frames,exposure_ms,int16,False,ms,cube_meta:exposure,Camera exposure time.
+master_frames,frame_interval_s,double,True,s,derived,time_delta_s minus previous frame's time_delta_s.
+master_frames,pressure_mmhg,int16,False,mmHg,derived,Upper-arm cuff pressure parsed from stage label; 0 for baseline and rest periods.
+master_frames,phase,string,False,,derived,baseline = before_clamping; clamping = cuff pressure > 0; rest = during_clamping_0mmHg (no-pressure recovery period recorded between clamping stages).
+master_frames,stage_block_index,int16,False,,derived,"0-based index of the contiguous stage segment in the session timeline (0 = baseline, 1 = 20 mmHg, 2 = rest, 3 = 40 mmHg, ...). Distinguishes the eight separate rest periods."
+master_frames,preceding_pressure_mmhg,int16,True,mmHg,derived,For rest blocks: pressure of the clamping block immediately before (reperfusion context). Null for baseline and clamping blocks.
+master_frames,time_in_block_s,double,False,s,derived,time_delta_s minus time_delta_s of the first row of the same stage block.
+master_frames,n_rois_tracked,int8,False,,joined,Number of locally available ROI tracks that have a row matched to this frame.
+master_frames,image_file,string,False,,provenance,Dataset-relative path of the hyperspectral cube (.b2nd) that holds the frame.
+master_spectrometer,subject_id,string,False,,derived,'subject N' -> 'subject_NN' (zero-padded) to match cube names.
+master_spectrometer,subject_label_original,string,False,,source:subject,Subject label exactly as in the raw file.
+master_spectrometer,stage_original,string,False,,source:stage,Stage label exactly as in the raw file.
+master_spectrometer,stage,string,False,,derived,"Harmonised cube stage label: 'baseline (0 mmHg)' -> before_clamping, '160 mmHg' -> during_clamping_160mmHg (README mapping)."
+master_spectrometer,pressure_mmhg,int16,False,mmHg,derived,Upper-arm cuff pressure parsed from stage label; 0 for baseline and rest periods.
+master_spectrometer,phase,string,False,,derived,baseline = before_clamping; clamping = cuff pressure > 0; rest = during_clamping_0mmHg (no-pressure recovery period recorded between clamping stages).
+master_spectrometer,roi_id,int8,False,,source:ROI,"ROI number (1-4), same numbering as ROI track files."
+master_spectrometer,spectrum_index,int16,False,,derived,"0-based replicate spectrum number within (subject, stage, ROI): occurrence count of the wavelength within the group in file order. The file is wavelength-major; replicate order was verified (adjacent-wavelength correlation 0.996 aligned vs 0.14 shuffled)."
+master_spectrometer,wavelength_index,int16,False,,derived,0-based index into the 550 sorted spectrometer wavelengths.
+master_spectrometer,wavelength_nm,double,False,nm,source:wavelength [nm],Spectrometer wavelength.
+master_spectrometer,reflectance_au,double,False,a.u.,source:reflectance [a.u.],"Diffuse reflectance as provided (arbitrary units, unmodified)."
+master_spectrometer,flag_negative_reflectance,bool,False,,derived,reflectance_au < 0 (noise floor indicator).
+master_spectrometer,source_row_index,int64,False,,provenance,0-based data-row position in the raw source file (header excluded).
+master_spectrometer,source_file,string,False,,provenance,Dataset-relative path of the raw source file.
+optics_ximea_filters,wavelength_nm,int64,False,nm,source:Wavelength [nm],"Wavelength as provided. NOTE: integer-rounded in the raw file — per filter 601 samples map to 581 unique integers (20 duplicated, 20 skipped), so (filter, wavelength) is not unique."
+optics_ximea_filters,filter_id,int64,False,,source:filter,Filter number 1-16.
+optics_ximea_filters,wavelength_sample_index,int16,False,,derived,0-based sample position within the filter's curve in file order (0-600); unique key with filter_id.
+optics_ximea_filters,filter_response_au,double,False,a.u.,source:Filter response [a.u.],Filter response.
+optics_ximea_filters,channel_index,int8,False,,derived,filter_id - 1 = position on the cube channel axis (verified: filter peaks match README channel wavelengths within 2 nm).
+optics_ximea_filters,channel_nominal_wavelength_nm,int16,False,nm,derived,README nominal wavelength of that channel.
+optics_ximea_filters,source_row_index,int32,False,,provenance,0-based data-row position in the raw source file (header excluded).
+optics_ximea_filters,source_file,string,False,,provenance,Dataset-relative path of the raw source file.
+optics_xenon_light_source,wavelength_nm,double,False,nm,source:wavelength [nm],Wavelength.
+optics_xenon_light_source,relative_irradiance_au,double,False,a.u.,source:relative_irradiance [a.u.],"Relative irradiance as provided (negative values present in the raw file, kept unmodified)."
+optics_xenon_light_source,flag_negative_irradiance,bool,False,,derived,relative_irradiance_au < 0.
+optics_xenon_light_source,source_row_index,int32,False,,provenance,0-based data-row position in the raw source file (header excluded).
+optics_xenon_light_source,source_file,string,False,,provenance,Dataset-relative path of the raw source file.
+color_checker_spectrometer_adapted,reflectance,double,False,a.u.,source:reflectance,Band-adapted reflectance as provided (values sum to ~1 over 16 bands; not interpreted further).
+color_checker_spectrometer_adapted,wavelength_nm,int64,False,nm,source:wavelength,Nominal camera band wavelength.
+color_checker_spectrometer_adapted,color_name,string,False,,source:color_name,Colour-checker patch name.
+color_checker_spectrometer_adapted,color_hex,string,False,,source:color,Display colour of the patch.
+color_checker_spectrometer_adapted,band,int64,False,,source:band,Camera band index (= cube channel index).
+color_checker_spectrometer_adapted,color_index,int64,False,,source:ind,Colour-checker patch number.
+color_checker_spectrometer_adapted,source_row_index,int32,False,,provenance,0-based data-row position in the raw source file (header excluded).
+color_checker_spectrometer_adapted,source_file,string,False,,provenance,Dataset-relative path of the raw source file.
+color_checker_frames,cube,string,False,,source_path,ximea_raw or ximea_norm.
+color_checker_frames,frame_index,int32,False,,provenance,Index along axis 0 of the cube.
+color_checker_frames,color_name,string,False,,cube_meta:color,Patch imaged in the frame.
+color_checker_frames,time_delta_s,double,False,s,cube_meta:time_delta,Time since start of recording.
+color_checker_frames,exposure_ms,int16,False,ms,cube_meta:exposure,Camera exposure time.
+color_checker_frames,image_file,string,False,,provenance,Dataset-relative path of the hyperspectral cube (.b2nd) that holds the frame.
+ref_channels,channel_index,int8,False,,derived,Position on the cube channel (last) axis.
+ref_channels,filter_id,int8,False,,derived,channel_index + 1 (filter number in ximea_filters).
+ref_channels,nominal_wavelength_nm,int16,False,nm,source:README.md,Channel wavelength listed in the dataset README.
+ref_channels,peak_wavelength_nm,int16,False,nm,derived,Argmax of the filter response curve.
+ref_channels,peak_response_au,double,False,a.u.,derived,Maximum filter response.
+ref_channels,centroid_wavelength_nm,double,False,nm,derived,Response-weighted mean wavelength over 400-1000 nm (includes NIR side lobes of the mosaic filters).
+ref_channels,fwhm_nm,double,False,nm,derived,Width of the contiguous region around the peak above half maximum.
+ref_channels,secondary_peak_ratio,double,False,,derived,Highest response outside the main FWHM lobe (+/-10 nm) divided by the peak (spectral cross-talk indicator).
+ref_channels,dark_mean,double,False,counts,derived,Mean of dark reference for this channel.
+ref_channels,dark_std,double,False,counts,derived,Std of dark reference for this channel.
+ref_channels,dark_min,double,False,counts,derived,Min of dark reference.
+ref_channels,dark_max,double,False,counts,derived,Max of dark reference.
+ref_channels,colorchecker_band_wavelength_nm,int16,True,nm,joined,Wavelength assigned to this band in color_checker/spectrometer_adapted (consistency check).
+ref_stages,stage_order,int8,False,,source:metadata.json,Order in metadata.json 'stages'.
+ref_stages,stage,string,False,,source:stage,Experimental stage label as written in the raw data (before_clamping | during_clamping_<P>mmHg).
+ref_stages,pressure_mmhg,int16,False,mmHg,derived,Upper-arm cuff pressure parsed from stage label; 0 for baseline and rest periods.
+ref_stages,phase,string,False,,derived,baseline = before_clamping; clamping = cuff pressure > 0; rest = during_clamping_0mmHg (no-pressure recovery period recorded between clamping stages).
+ref_stages,spectrometer_stage_label,string,True,,derived,"Matching label in spectrometer.csv, if any."
+ref_stages,blocks_per_session,int8,True,,derived,Number of contiguous blocks of this stage in a complete session (from local cubes; null if unseen).
+ref_subjects,subject_id,string,False,,source_path,Canonical subject identifier 'subject_NN' (matches cube file and ROI folder names).
+ref_subjects,cube_status,string,False,,derived,complete | partial_download | missing (local file system).
+ref_subjects,cube_file,string,True,,provenance,Dataset-relative path of cube or partial-download stub.
+ref_subjects,cube_bytes,int64,True,bytes,provenance,Size on disk.
+ref_subjects,n_frames,int32,True,,cube_meta,Frames in the cube (complete cubes only).
+ref_subjects,exposure_ms,int16,True,ms,cube_meta,Exposure (unique per subject).
+ref_subjects,frame_rate_hz,double,True,Hz,derived,1 / median frame interval.
+ref_subjects,duration_s,double,True,s,cube_meta,Last frame time_delta.
+ref_subjects,n_stage_blocks,int16,True,,derived,Contiguous stage blocks in the cube timeline.
+ref_subjects,roi_ids_available,string,False,,source_path,Comma-separated ROI numbers with local track files.
+ref_subjects,n_roi_rows,int32,False,,derived,ROI rows in master_rois for the subject.
+ref_subjects,n_spectra_baseline,int16,False,,derived,Replicate spectra at baseline (all ROIs).
+ref_subjects,n_spectra_160mmHg,int16,False,,derived,Replicate spectra at 160 mmHg (all ROIs).
+ref_subjects,usable_roi_image_analysis,bool,False,,derived,True when complete cube AND at least one ROI track exist (ROI-level spectral-temporal extraction possible).
