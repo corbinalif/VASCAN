@@ -1,0 +1,250 @@
+{
+  "code": "pmhm-phase-a-e-1.0",
+  "analysis_parameters": {
+    "gap_s": 1.0,
+    "plateau_s": 30.0,
+    "local_ref_s": 20.0,
+    "baseline_ref_s": 60.0,
+    "slope_s": 10.0,
+    "overshoot_s": 15.0,
+    "sdc_win_s": 30,
+    "sdc_block_s": 10,
+    "sdc_boot": 200,
+    "boot": 2000,
+    "kin_boot": 100,
+    "mbb_block": 30,
+    "dark_scenarios": {
+      "D0": 0.0,
+      "D1": 1.0,
+      "D2": 2.0
+    },
+    "primary_dark": "D1",
+    "disp_flag_px": 1.0,
+    "sensor_max": 1023.0,
+    "sat_frac": 0.95,
+    "main_lobe_fwhm": 1.5,
+    "ridge_alphas": [
+      1e-08,
+      1e-06,
+      0.0001,
+      0.01,
+      1.0,
+      100.0
+    ],
+    "gain_err_tol": 0.15,
+    "gain_min_bands": 12,
+    "xt_min_folds": 8,
+    "win_s": 5.0,
+    "stride_s": 1.0,
+    "purge_s": 5.0,
+    "tau_bounds": [
+      0.5,
+      120.0
+    ],
+    "fit_r2_min": 0.5,
+    "fit_accept_share": 0.7,
+    "recovery_t": 20.0,
+    "alpha": 0.05,
+    "mbll_cond_max": 1000.0,
+    "h1_min_pressure": 60,
+    "rq2_min_pressure": 60,
+    "primary_feature": "r550_609",
+    "key_features": [
+      "r550_609",
+      "rel_550",
+      "rel_609",
+      "mbll_total",
+      "mbll_diff"
+    ]
+  },
+  "grids": {
+    "majority": [
+      {}
+    ],
+    "logreg_pca": [
+      {
+        "C": 0.1
+      },
+      {
+        "C": 1.0
+      },
+      {
+        "C": 10.0
+      }
+    ],
+    "pls": [
+      {
+        "n": 2
+      },
+      {
+        "n": 4
+      },
+      {
+        "n": 8
+      }
+    ],
+    "rf": [
+      {
+        "max_depth": null
+      },
+      {
+        "max_depth": 8
+      }
+    ],
+    "svm": [
+      {
+        "C": 0.3
+      },
+      {
+        "C": 3.0
+      }
+    ]
+  },
+  "feature_families": {
+    "raw": [
+      "raw_488",
+      "raw_496",
+      "raw_478",
+      "raw_465",
+      "raw_598",
+      "raw_609",
+      "raw_585",
+      "raw_574",
+      "raw_641",
+      "raw_493",
+      "raw_632",
+      "raw_622",
+      "raw_538",
+      "raw_550",
+      "raw_524",
+      "raw_511"
+    ],
+    "rel": [
+      "rel_488",
+      "rel_496",
+      "rel_478",
+      "rel_465",
+      "rel_598",
+      "rel_609",
+      "rel_585",
+      "rel_574",
+      "rel_641",
+      "rel_493",
+      "rel_632",
+      "rel_622",
+      "rel_538",
+      "rel_550",
+      "rel_524",
+      "rel_511"
+    ],
+    "l1": [
+      "l1_488",
+      "l1_496",
+      "l1_478",
+      "l1_465",
+      "l1_598",
+      "l1_609",
+      "l1_585",
+      "l1_574",
+      "l1_641",
+      "l1_493",
+      "l1_632",
+      "l1_622",
+      "l1_538",
+      "l1_550",
+      "l1_524",
+      "l1_511"
+    ],
+    "ratio": [
+      "r488_609",
+      "r496_609",
+      "r478_609",
+      "r465_609",
+      "r598_609",
+      "r585_609",
+      "r574_609",
+      "r641_609",
+      "r493_609",
+      "r632_609",
+      "r622_609",
+      "r538_609",
+      "r550_609",
+      "r524_609",
+      "r511_609",
+      "r488_641",
+      "r496_641",
+      "r478_641",
+      "r465_641",
+      "r598_641",
+      "r609_641",
+      "r585_641",
+      "r574_641",
+      "r493_641",
+      "r632_641",
+      "r622_641",
+      "r538_641",
+      "r550_641",
+      "r524_641",
+      "r511_641"
+    ],
+    "mbll": [
+      "mbll_hbo2",
+      "mbll_hb",
+      "mbll_total",
+      "mbll_diff"
+    ]
+  },
+  "feature_sets": [
+    "raw",
+    "rel",
+    "l1",
+    "ratio",
+    "mbll",
+    "all"
+  ],
+  "models": [
+    "majority",
+    "logreg_pca",
+    "pls",
+    "rf",
+    "svm"
+  ],
+  "h2_model": "logreg_pca",
+  "temporal": {
+    "enabled": true,
+    "backbones": [
+      "tcn",
+      "gru"
+    ],
+    "features": "ratio",
+    "train": {
+      "epochs": 40,
+      "batch_size": 64,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "patience": 6,
+      "hidden": 32,
+      "dropout": 0.1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "max_params": 100000
+    }
+  },
+  "decisions": {
+    "H1_camera": "per participant: exact one-sided permutation Spearman p<alpha on ROI-mean local delta of r550_609 across 8 pressures; delta < -SDC95 at every pressure >= 60 mmHg; clamp Theil-Sen slope more negative and larger in magnitude than placebo slope",
+    "H1_spectrometer": "exact one-sided Wilcoxon (n=10) on participant mean log(S550/S609) 160 minus baseline, p<alpha and bootstrap CI below 0",
+    "H1_overall": "supported if both arms; partially if one; not supported if neither",
+    "RQ2": "Holm-adjusted permutation trend of tau, half-time, overshoot vs preceding pressure (>=60 mmHg) p<alpha in both participants",
+    "RQ3": "family robust if not worse than raw on any criterion and better on >=2",
+    "H2": "ratio error < raw error in both cross-participant directions (T1a, H2 model) and in T1d (exact one-sided Wilcoxon over 10 folds p<alpha)"
+  },
+  "status": {
+    "H1_camera_arm": "non-confirmatory: generated the hypothesis",
+    "H1_spectrometer_arm": "independent: ratio never computed before this plan",
+    "roi_correspondence_confirmed": false
+  },
+  "spatial_scope": "ROI mean/SD statistics only; no pixel-level spatial information is available"
+}

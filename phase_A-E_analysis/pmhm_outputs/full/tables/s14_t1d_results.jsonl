@@ -1,0 +1,160 @@
+{"key": "T1d|raw|majority|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_01", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|raw|majority|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_02", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|raw|majority|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_03", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|raw|majority|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_04", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|raw|majority|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_05", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|raw|majority|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_06", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|raw|majority|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_07", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|raw|majority|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_08", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|raw|majority|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_09", "hp": {}, "bal_acc": 0.5, "n_test": 799}
+{"key": "T1d|raw|majority|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "majority", "test_subject": "subject_10", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|raw|logreg_pca|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_01", "hp": {"C": 0.1}, "bal_acc": 0.6656846733668342, "n_test": 798}
+{"key": "T1d|raw|logreg_pca|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_02", "hp": {"C": 0.1}, "bal_acc": 0.7909484924623116, "n_test": 798}
+{"key": "T1d|raw|logreg_pca|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_03", "hp": {"C": 0.1}, "bal_acc": 0.79125, "n_test": 800}
+{"key": "T1d|raw|logreg_pca|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_04", "hp": {"C": 0.1}, "bal_acc": 0.63375, "n_test": 800}
+{"key": "T1d|raw|logreg_pca|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_05", "hp": {"C": 0.1}, "bal_acc": 0.4625, "n_test": 800}
+{"key": "T1d|raw|logreg_pca|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_06", "hp": {"C": 0.1}, "bal_acc": 0.53125, "n_test": 800}
+{"key": "T1d|raw|logreg_pca|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_07", "hp": {"C": 0.1}, "bal_acc": 0.52, "n_test": 800}
+{"key": "T1d|raw|logreg_pca|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_08", "hp": {"C": 0.1}, "bal_acc": 0.55875, "n_test": 800}
+{"key": "T1d|raw|logreg_pca|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_09", "hp": {"C": 0.1}, "bal_acc": 0.4925, "n_test": 799}
+{"key": "T1d|raw|logreg_pca|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "logreg_pca", "test_subject": "subject_10", "hp": {"C": 0.1}, "bal_acc": 0.41000000000000003, "n_test": 800}
+{"key": "T1d|raw|rf|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_01", "hp": {"max_depth": null}, "bal_acc": 0.5847550251256282, "n_test": 798}
+{"key": "T1d|raw|rf|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_02", "hp": {"max_depth": null}, "bal_acc": 0.5044974874371859, "n_test": 798}
+{"key": "T1d|raw|rf|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_03", "hp": {"max_depth": null}, "bal_acc": 0.71, "n_test": 800}
+{"key": "T1d|raw|rf|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_04", "hp": {"max_depth": 8}, "bal_acc": 0.5775, "n_test": 800}
+{"key": "T1d|raw|rf|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_05", "hp": {"max_depth": 8}, "bal_acc": 0.735, "n_test": 800}
+{"key": "T1d|raw|rf|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_06", "hp": {"max_depth": 8}, "bal_acc": 0.59625, "n_test": 800}
+{"key": "T1d|raw|rf|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_07", "hp": {"max_depth": 8}, "bal_acc": 0.60625, "n_test": 800}
+{"key": "T1d|raw|rf|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_08", "hp": {"max_depth": null}, "bal_acc": 0.43125, "n_test": 800}
+{"key": "T1d|raw|rf|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_09", "hp": {"max_depth": null}, "bal_acc": 0.7945520050125313, "n_test": 799}
+{"key": "T1d|raw|rf|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "rf", "test_subject": "subject_10", "hp": {"max_depth": 8}, "bal_acc": 0.4975, "n_test": 800}
+{"key": "T1d|raw|svm|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_01", "hp": {"C": 3.0}, "bal_acc": 0.5124748743718592, "n_test": 798}
+{"key": "T1d|raw|svm|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_02", "hp": {"C": 3.0}, "bal_acc": 0.5411118090452262, "n_test": 798}
+{"key": "T1d|raw|svm|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_03", "hp": {"C": 3.0}, "bal_acc": 0.7725, "n_test": 800}
+{"key": "T1d|raw|svm|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_04", "hp": {"C": 3.0}, "bal_acc": 0.53125, "n_test": 800}
+{"key": "T1d|raw|svm|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_05", "hp": {"C": 0.3}, "bal_acc": 0.6025, "n_test": 800}
+{"key": "T1d|raw|svm|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_06", "hp": {"C": 0.3}, "bal_acc": 0.5925, "n_test": 800}
+{"key": "T1d|raw|svm|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_07", "hp": {"C": 0.3}, "bal_acc": 0.66125, "n_test": 800}
+{"key": "T1d|raw|svm|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_08", "hp": {"C": 3.0}, "bal_acc": 0.4475, "n_test": 800}
+{"key": "T1d|raw|svm|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_09", "hp": {"C": 3.0}, "bal_acc": 0.7280701754385965, "n_test": 799}
+{"key": "T1d|raw|svm|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "raw", "model": "svm", "test_subject": "subject_10", "hp": {"C": 0.3}, "bal_acc": 0.47125, "n_test": 800}
+{"key": "T1d|l1|majority|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_01", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|l1|majority|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_02", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|l1|majority|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_03", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|majority|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_04", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|majority|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_05", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|majority|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_06", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|majority|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_07", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|majority|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_08", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|majority|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_09", "hp": {}, "bal_acc": 0.5, "n_test": 799}
+{"key": "T1d|l1|majority|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "majority", "test_subject": "subject_10", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|logreg_pca|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_01", "hp": {"C": 1.0}, "bal_acc": 0.5213567839195979, "n_test": 798}
+{"key": "T1d|l1|logreg_pca|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_02", "hp": {"C": 0.1}, "bal_acc": 0.50375, "n_test": 798}
+{"key": "T1d|l1|logreg_pca|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_03", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|logreg_pca|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_04", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|logreg_pca|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_05", "hp": {"C": 0.1}, "bal_acc": 0.71, "n_test": 800}
+{"key": "T1d|l1|logreg_pca|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_06", "hp": {"C": 0.1}, "bal_acc": 0.77875, "n_test": 800}
+{"key": "T1d|l1|logreg_pca|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_07", "hp": {"C": 0.1}, "bal_acc": 0.7475, "n_test": 800}
+{"key": "T1d|l1|logreg_pca|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_08", "hp": {"C": 1.0}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|logreg_pca|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_09", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 799}
+{"key": "T1d|l1|logreg_pca|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "logreg_pca", "test_subject": "subject_10", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|l1|rf|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_01", "hp": {"max_depth": null}, "bal_acc": 0.8137437185929648, "n_test": 798}
+{"key": "T1d|l1|rf|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_02", "hp": {"max_depth": null}, "bal_acc": 0.5236683417085427, "n_test": 798}
+{"key": "T1d|l1|rf|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_03", "hp": {"max_depth": null}, "bal_acc": 0.83125, "n_test": 800}
+{"key": "T1d|l1|rf|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_04", "hp": {"max_depth": null}, "bal_acc": 0.63, "n_test": 800}
+{"key": "T1d|l1|rf|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_05", "hp": {"max_depth": null}, "bal_acc": 0.835, "n_test": 800}
+{"key": "T1d|l1|rf|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_06", "hp": {"max_depth": 8}, "bal_acc": 0.37875000000000003, "n_test": 800}
+{"key": "T1d|l1|rf|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_07", "hp": {"max_depth": 8}, "bal_acc": 0.98375, "n_test": 800}
+{"key": "T1d|l1|rf|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_08", "hp": {"max_depth": 8}, "bal_acc": 0.44875000000000004, "n_test": 800}
+{"key": "T1d|l1|rf|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_09", "hp": {"max_depth": null}, "bal_acc": 0.623110902255639, "n_test": 799}
+{"key": "T1d|l1|rf|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "rf", "test_subject": "subject_10", "hp": {"max_depth": 8}, "bal_acc": 0.825, "n_test": 800}
+{"key": "T1d|l1|svm|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_01", "hp": {"C": 0.3}, "bal_acc": 0.73, "n_test": 798}
+{"key": "T1d|l1|svm|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_02", "hp": {"C": 0.3}, "bal_acc": 0.5224874371859296, "n_test": 798}
+{"key": "T1d|l1|svm|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_03", "hp": {"C": 3.0}, "bal_acc": 0.93875, "n_test": 800}
+{"key": "T1d|l1|svm|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_04", "hp": {"C": 0.3}, "bal_acc": 0.6499999999999999, "n_test": 800}
+{"key": "T1d|l1|svm|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_05", "hp": {"C": 0.3}, "bal_acc": 0.8474999999999999, "n_test": 800}
+{"key": "T1d|l1|svm|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_06", "hp": {"C": 0.3}, "bal_acc": 0.34875, "n_test": 800}
+{"key": "T1d|l1|svm|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_07", "hp": {"C": 0.3}, "bal_acc": 0.9450000000000001, "n_test": 800}
+{"key": "T1d|l1|svm|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_08", "hp": {"C": 3.0}, "bal_acc": 0.44375, "n_test": 800}
+{"key": "T1d|l1|svm|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_09", "hp": {"C": 3.0}, "bal_acc": 0.7382393483709273, "n_test": 799}
+{"key": "T1d|l1|svm|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "l1", "model": "svm", "test_subject": "subject_10", "hp": {"C": 0.3}, "bal_acc": 0.85375, "n_test": 800}
+{"key": "T1d|ratio|majority|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_01", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|ratio|majority|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_02", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|ratio|majority|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_03", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|majority|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_04", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|majority|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_05", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|majority|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_06", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|majority|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_07", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|majority|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_08", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|majority|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_09", "hp": {}, "bal_acc": 0.5, "n_test": 799}
+{"key": "T1d|ratio|majority|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "majority", "test_subject": "subject_10", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|logreg_pca|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_01", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|ratio|logreg_pca|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_02", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|ratio|logreg_pca|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_03", "hp": {"C": 0.1}, "bal_acc": 0.505, "n_test": 800}
+{"key": "T1d|ratio|logreg_pca|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_04", "hp": {"C": 1.0}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|logreg_pca|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_05", "hp": {"C": 0.1}, "bal_acc": 0.61, "n_test": 800}
+{"key": "T1d|ratio|logreg_pca|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_06", "hp": {"C": 0.1}, "bal_acc": 0.93625, "n_test": 800}
+{"key": "T1d|ratio|logreg_pca|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_07", "hp": {"C": 0.1}, "bal_acc": 0.51625, "n_test": 800}
+{"key": "T1d|ratio|logreg_pca|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_08", "hp": {"C": 0.1}, "bal_acc": 0.50625, "n_test": 800}
+{"key": "T1d|ratio|logreg_pca|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_09", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 799}
+{"key": "T1d|ratio|logreg_pca|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "logreg_pca", "test_subject": "subject_10", "hp": {"C": 1.0}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|ratio|rf|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_01", "hp": {"max_depth": null}, "bal_acc": 0.7725, "n_test": 798}
+{"key": "T1d|ratio|rf|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_02", "hp": {"max_depth": null}, "bal_acc": 0.5060489949748743, "n_test": 798}
+{"key": "T1d|ratio|rf|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_03", "hp": {"max_depth": null}, "bal_acc": 0.91125, "n_test": 800}
+{"key": "T1d|ratio|rf|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_04", "hp": {"max_depth": null}, "bal_acc": 0.57125, "n_test": 800}
+{"key": "T1d|ratio|rf|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_05", "hp": {"max_depth": null}, "bal_acc": 0.8525, "n_test": 800}
+{"key": "T1d|ratio|rf|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_06", "hp": {"max_depth": null}, "bal_acc": 0.48625, "n_test": 800}
+{"key": "T1d|ratio|rf|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_07", "hp": {"max_depth": 8}, "bal_acc": 0.9125000000000001, "n_test": 800}
+{"key": "T1d|ratio|rf|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_08", "hp": {"max_depth": 8}, "bal_acc": 0.39249999999999996, "n_test": 800}
+{"key": "T1d|ratio|rf|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_09", "hp": {"max_depth": null}, "bal_acc": 0.6520426065162908, "n_test": 799}
+{"key": "T1d|ratio|rf|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "rf", "test_subject": "subject_10", "hp": {"max_depth": null}, "bal_acc": 0.74875, "n_test": 800}
+{"key": "T1d|ratio|svm|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_01", "hp": {"C": 0.3}, "bal_acc": 0.8037437185929648, "n_test": 798}
+{"key": "T1d|ratio|svm|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_02", "hp": {"C": 0.3}, "bal_acc": 0.5298680904522614, "n_test": 798}
+{"key": "T1d|ratio|svm|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_03", "hp": {"C": 3.0}, "bal_acc": 0.89, "n_test": 800}
+{"key": "T1d|ratio|svm|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_04", "hp": {"C": 0.3}, "bal_acc": 0.5825, "n_test": 800}
+{"key": "T1d|ratio|svm|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_05", "hp": {"C": 0.3}, "bal_acc": 0.8500000000000001, "n_test": 800}
+{"key": "T1d|ratio|svm|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_06", "hp": {"C": 0.3}, "bal_acc": 0.31125, "n_test": 800}
+{"key": "T1d|ratio|svm|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_07", "hp": {"C": 0.3}, "bal_acc": 0.9099999999999999, "n_test": 800}
+{"key": "T1d|ratio|svm|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_08", "hp": {"C": 3.0}, "bal_acc": 0.425, "n_test": 800}
+{"key": "T1d|ratio|svm|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_09", "hp": {"C": 0.3}, "bal_acc": 0.8221929824561404, "n_test": 799}
+{"key": "T1d|ratio|svm|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "ratio", "model": "svm", "test_subject": "subject_10", "hp": {"C": 0.3}, "bal_acc": 0.875, "n_test": 800}
+{"key": "T1d|all|majority|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_01", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|all|majority|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_02", "hp": {}, "bal_acc": 0.5, "n_test": 798}
+{"key": "T1d|all|majority|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_03", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|majority|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_04", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|majority|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_05", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|majority|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_06", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|majority|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_07", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|majority|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_08", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|majority|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_09", "hp": {}, "bal_acc": 0.5, "n_test": 799}
+{"key": "T1d|all|majority|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "majority", "test_subject": "subject_10", "hp": {}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|logreg_pca|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_01", "hp": {"C": 1.0}, "bal_acc": 0.7093718592964824, "n_test": 798}
+{"key": "T1d|all|logreg_pca|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_02", "hp": {"C": 0.1}, "bal_acc": 0.51375, "n_test": 798}
+{"key": "T1d|all|logreg_pca|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_03", "hp": {"C": 0.1}, "bal_acc": 0.52, "n_test": 800}
+{"key": "T1d|all|logreg_pca|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_04", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|logreg_pca|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_05", "hp": {"C": 0.1}, "bal_acc": 0.6275, "n_test": 800}
+{"key": "T1d|all|logreg_pca|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_06", "hp": {"C": 0.1}, "bal_acc": 0.50625, "n_test": 800}
+{"key": "T1d|all|logreg_pca|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_07", "hp": {"C": 0.1}, "bal_acc": 0.50125, "n_test": 800}
+{"key": "T1d|all|logreg_pca|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_08", "hp": {"C": 1.0}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|logreg_pca|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_09", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 799}
+{"key": "T1d|all|logreg_pca|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "logreg_pca", "test_subject": "subject_10", "hp": {"C": 0.1}, "bal_acc": 0.5, "n_test": 800}
+{"key": "T1d|all|rf|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_01", "hp": {"max_depth": null}, "bal_acc": 0.55375, "n_test": 798}
+{"key": "T1d|all|rf|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_02", "hp": {"max_depth": null}, "bal_acc": 0.4771356783919598, "n_test": 798}
+{"key": "T1d|all|rf|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_03", "hp": {"max_depth": null}, "bal_acc": 0.8425, "n_test": 800}
+{"key": "T1d|all|rf|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_04", "hp": {"max_depth": null}, "bal_acc": 0.58875, "n_test": 800}
+{"key": "T1d|all|rf|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_05", "hp": {"max_depth": null}, "bal_acc": 0.83375, "n_test": 800}
+{"key": "T1d|all|rf|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_06", "hp": {"max_depth": null}, "bal_acc": 0.38, "n_test": 800}
+{"key": "T1d|all|rf|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_07", "hp": {"max_depth": 8}, "bal_acc": 0.89625, "n_test": 800}
+{"key": "T1d|all|rf|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_08", "hp": {"max_depth": 8}, "bal_acc": 0.44000000000000006, "n_test": 800}
+{"key": "T1d|all|rf|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_09", "hp": {"max_depth": null}, "bal_acc": 0.6955827067669174, "n_test": 799}
+{"key": "T1d|all|rf|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "rf", "test_subject": "subject_10", "hp": {"max_depth": null}, "bal_acc": 0.7849999999999999, "n_test": 800}
+{"key": "T1d|all|svm|subject_01", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_01", "hp": {"C": 3.0}, "bal_acc": 0.6649937185929649, "n_test": 798}
+{"key": "T1d|all|svm|subject_02", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_02", "hp": {"C": 3.0}, "bal_acc": 0.5349874371859297, "n_test": 798}
+{"key": "T1d|all|svm|subject_03", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_03", "hp": {"C": 3.0}, "bal_acc": 0.94, "n_test": 800}
+{"key": "T1d|all|svm|subject_04", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_04", "hp": {"C": 3.0}, "bal_acc": 0.6287499999999999, "n_test": 800}
+{"key": "T1d|all|svm|subject_05", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_05", "hp": {"C": 3.0}, "bal_acc": 0.81375, "n_test": 800}
+{"key": "T1d|all|svm|subject_06", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_06", "hp": {"C": 3.0}, "bal_acc": 0.51, "n_test": 800}
+{"key": "T1d|all|svm|subject_07", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_07", "hp": {"C": 3.0}, "bal_acc": 0.935, "n_test": 800}
+{"key": "T1d|all|svm|subject_08", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_08", "hp": {"C": 3.0}, "bal_acc": 0.46499999999999997, "n_test": 800}
+{"key": "T1d|all|svm|subject_09", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_09", "hp": {"C": 3.0}, "bal_acc": 0.6604323308270676, "n_test": 799}
+{"key": "T1d|all|svm|subject_10", "config_hash": "d8ad47825b11ec17", "feature_set": "all", "model": "svm", "test_subject": "subject_10", "hp": {"C": 3.0}, "bal_acc": 0.80875, "n_test": 800}

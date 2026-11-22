@@ -18,6 +18,14 @@ Each phase folder below explains its steps, points to the notebook section that 
 
 Sections 0–11 are shared infrastructure: configuration, imports, environment, logging, dataset validation, the step engine, data access, statistics, optics, feature engineering, block windows and plotting. Sections 29–30 are reporting and the main run.
 
+## Results
+
+The full run of 20 November 2026 (Kaggle, CPU, 32 minutes) is written up in **[PMHM_Phase_A-E_Results.pdf](PMHM_Phase_A-E_Results.pdf)**: every step's results with all tables and figures. The raw outputs are in [`pmhm_outputs/full/`](pmhm_outputs/full/) (report, figures, tables, models, predictions, logs; the resume caches are not committed). To rebuild the PDF from a run:
+
+```bash
+python build_results_pdf.py pmhm_outputs/full PMHM_Phase_A-E_Results.pdf
+```
+
 ## Running
 
 ```bash

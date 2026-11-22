@@ -1,0 +1,5 @@
+record_type,rows,seconds,rss_after_mb
+roi_frame,125323,0.046,578.9
+spectrometer,4397250,0.148,671.3
+channel,16,0.037,678.9
+subject,10,0.037,686.4

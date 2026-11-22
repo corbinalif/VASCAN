@@ -1,0 +1,20 @@
+test,passed,detail
+81 columns,True,81
+record counts,True,"{'roi_frame': 125323, 'frame': 48157, 'spectrometer': 4397250, 'camera_filter': 9616, 'light_source': 2033, 'color_checker': 3840, 'channel': 16, 'stage': 10, 'subject': 10}"
+sha256,True,eb77b66a76f27eab
+channel columns present,True,
+roi_frame per subject,True,"{'subject_01': 71344, 'subject_02': 53979}"
+no spectra without image,True,1796 post-video rows
+17 blocks per camera subject,True,
+time monotonic per ROI,True,
+channel order matches metadata,True,
+colour-checker replicates L1-normalised,True,240 replicates
+spectra x 550 wavelengths,True,"(7995, 550)"
+golden 550/609 subject_01,True,-4.1..-0.4
+golden raw550@160 subject_01,True,-5.7
+golden recovery subject_01,True,5.0
+golden 550/609 subject_02,True,-6.1..-2.5
+golden raw550@160 subject_02,True,7.8
+golden recovery subject_02,True,6.0
+golden spectrometer 6/10 higher at 160,True,6
+"golden spectrometer group rise 500-650 nm (verified: 16.3-30.1%, median 20.8%)",True,"16.3..30.1, median 20.8; proposal v1.0 text '18-22%' understates the range"

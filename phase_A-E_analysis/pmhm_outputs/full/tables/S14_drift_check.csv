@@ -1,0 +1,3 @@
+train_subject,test_subject,rho_pred_vs_time,p,drift_flag,mean_pred_rest
+subject_01,subject_02,-0.07316349553689265,0.05266834436527126,False,36.4917106628418
+subject_02,subject_01,0.17007352799529368,7.989497205770782e-08,False,60.92237854003906

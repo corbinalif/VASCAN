@@ -1,0 +1,128 @@
+[{"stream_name":"stderr","time":9.239173399,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.239224535,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.239231573,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.239236005,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.988787531,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.988823613,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.988829293,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.988833638,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":26.967014839,"data":"10:30:11 | INFO    | PMHM Phase A–E pipeline pmhm-phase-a-e-1.0 | env=kaggle | mode=full | profile=M | device=cpu | RAM total=32099 MB avail=30740 MB | out=/kaggle/working/pmhm_outputs/full\n"}
+,{"stream_name":"stdout","time":26.970052404,"data":"10:30:11 | WARNING | Configured data path not found: /kaggle/input/spectralpaca-pmhm/spectralpaca_pmhm_dataset.parquet. Searching under /kaggle/input ...\n"}
+,{"stream_name":"stdout","time":28.564339423,"data":"10:30:13 | INFO    | Dataset OK: /kaggle/input/datasets/<kaggle-user>/spectralpaca-pmhm/spectralpaca_pmhm_dataset.parquet | 56.58 MB | 4,586,255 rows | 81 columns | sha256 eb77b66a76f2…\n"}
+,{"stream_name":"stdout","time":28.565220386,"data":"10:30:13 | INFO    | Record types: camera_filter=9,616, channel=16, color_checker=3,840, frame=48,157, light_source=2,033, roi_frame=125,323, spectrometer=4,397,250, stage=10, subject=10\n"}
+,{"stream_name":"stdout","time":28.638001472,"data":"10:30:13 | INFO    | [S0] START Environment and run manifest\n"}
+,{"stream_name":"stdout","time":28.640619067,"data":"10:30:13 | INFO    | [S0] DONE in 0.0 s | RSS 648 MB | peak 663 MB\n"}
+,{"stream_name":"stdout","time":28.892376846,"data":"10:30:13 | INFO    | [S1] START Data access layer, contract and golden tests\n"}
+,{"stream_name":"stdout","time":31.690526857000002,"data":"10:30:16 | INFO    | Contract/golden tests: 19/19 passed\n"}
+,{"stream_name":"stdout","time":31.703323287,"data":"10:30:16 | INFO    | [S1] DONE in 2.8 s | RSS 805 MB | peak 811 MB\n"}
+,{"stream_name":"stdout","time":31.956191373,"data":"10:30:16 | INFO    | [S2] START Analysis plan frozen before confirmatory steps\n"}
+,{"stream_name":"stdout","time":31.958750804,"data":"10:30:16 | WARNING | PLAN_SIGNED_OFF=False: confirmatory results (S10-S14) will be labelled 'plan not signed off'\n"}
+,{"stream_name":"stdout","time":31.960838463,"data":"10:30:16 | INFO    | [S2] DONE in 0.0 s | RSS 805 MB | peak 811 MB\n"}
+,{"stream_name":"stdout","time":32.209290016,"data":"10:30:16 | INFO    | [S3] START Quality control and frame flags\n"}
+,{"stream_name":"stdout","time":32.507333842,"data":"10:30:17 | INFO    | QC: gaps=4, stage agreement=1.0000, post-video rows=1796, disp-flagged=988, saturated ROIs=0\n"}
+,{"stream_name":"stdout","time":32.517173709,"data":"10:30:17 | INFO    | [S3] DONE in 0.3 s | RSS 806 MB | peak 811 MB\n"}
+,{"stream_name":"stdout","time":32.765319145,"data":"10:30:17 | INFO    | [S4] START Dark offset scenarios\n"}
+,{"stream_name":"stdout","time":33.861982393,"data":"10:30:18 | INFO    | Dark scenarios: sign flips in 0 subject-pressure cells; max spread 0.01018\n"}
+,{"stream_name":"stdout","time":33.869276223,"data":"10:30:18 | INFO    | [S4] DONE in 1.1 s | RSS 805 MB | peak 852 MB\n"}
+,{"stream_name":"stdout","time":34.120702215,"data":"10:30:18 | INFO    | [S5] START Spectrometer-to-camera forward model\n"}
+,{"stream_name":"stdout","time":35.707643326,"data":"10:30:20 | INFO    | Forward model: max truncation 0.0029; negatives in support 4540; extinction design condition number 99.8\n"}
+,{"stream_name":"stdout","time":35.736986771,"data":"10:30:20 | INFO    | [S5] DONE in 1.6 s | RSS 764 MB | peak 860 MB\n"}
+,{"stream_name":"stdout","time":36.003605329,"data":"10:30:20 | INFO    | [S6] START Relative reflectance and spectrometer-anchored effective gain\n"}
+,{"stream_name":"stdout","time":36.174459397,"data":"10:30:20 | INFO    | Gain model: bands within 15% per direction = [16, 16]; absolute calibration adopted=True\n"}
+,{"stream_name":"stdout","time":36.188641768,"data":"10:30:20 | INFO    | [S6] DONE in 0.2 s | RSS 764 MB | peak 860 MB\n"}
+,{"stream_name":"stdout","time":36.454600765,"data":"10:30:21 | INFO    | [S7] START Cross-talk characterisation and LOPO correction\n"}
+,{"stream_name":"stdout","time":38.994974476,"data":"10:30:23 | INFO    | Cross-talk: improved in 10/10 folds; neutral patches pass=False; adopted as sensitivity variant=False\n"}
+,{"stream_name":"stdout","time":39.003627903,"data":"10:30:23 | INFO    | [S7] DONE in 2.5 s | RSS 764 MB | peak 860 MB\n"}
+,{"stream_name":"stdout","time":39.270317776,"data":"10:30:23 | INFO    | [S8] START Frame-level features (camera and spectrometer)\n"}
+,{"stream_name":"stdout","time":40.776202158,"data":"10:30:25 | INFO    | Frame features: 158,844 rows x 82 features; spectrometer features (7995, 87)\n"}
+,{"stream_name":"stdout","time":42.396130794,"data":"10:30:27 | INFO    | [S8] DONE in 3.1 s | RSS 823 MB | peak 1019 MB\n"}
+,{"stream_name":"stdout","time":42.654685067,"data":"10:30:27 | INFO    | [S9] START Block-level features and smallest detectable change\n"}
+,{"stream_name":"stdout","time":51.712817926,"data":"10:30:36 | INFO    | Block stats: 369 windows (0 invalid); deltas 360; kinetics 720\n"}
+,{"stream_name":"stdout","time":51.759470246,"data":"10:30:36 | INFO    | [S9] DONE in 9.1 s | RSS 845 MB | peak 1019 MB\n"}
+,{"stream_name":"stdout","time":52.030103902,"data":"10:30:36 | INFO    | [S10] START Dose-response and H1 (camera arm + spectrometer arm)\n"}
+,{"stream_name":"stdout","time":54.827614214,"data":"10:30:39 | INFO    | H1: camera supported in 0/2; spectrometer p=0.2461, CI=(-0.027574793522389833, 0.027165182411801696); overall=not supported\n"}
+,{"stream_name":"stdout","time":54.832466687,"data":"10:30:39 | INFO    | Exploratory (not pre-specified): pressure of largest local decrease per participant: subject_01=100 mmHg, subject_02=120 mmHg\n"}
+,{"stream_name":"stdout","time":54.842614375,"data":"10:30:39 | INFO    | [S10] DONE in 2.8 s | RSS 859 MB | peak 1019 MB\n"}
+,{"stream_name":"stdout","time":55.116529258,"data":"10:30:39 | INFO    | [S11] START Recovery kinetics (RQ2)\n"}
+,{"stream_name":"stdout","time":250.037197446,"data":"10:33:54 | INFO    | RQ2: accepted fit share 0.43 (model-based=False); dependence={'overshoot': False, 't_half': False}\n"}
+,{"stream_name":"stdout","time":250.042711212,"data":"10:33:54 | INFO    | [S11] DONE in 194.9 s | RSS 919 MB | peak 1019 MB\n"}
+,{"stream_name":"stdout","time":250.328163263,"data":"10:33:55 | INFO    | [S12] START Feature-family robustness (RQ3)\n"}
+,{"stream_name":"stdout","time":251.917697617,"data":"10:33:56 | INFO    | RQ3 robust families: l1, mbll, ratio\n"}
+,{"stream_name":"stdout","time":251.925650765,"data":"10:33:56 | INFO    | [S12] DONE in 1.6 s | RSS 958 MB | peak 1019 MB\n"}
+,{"stream_name":"stdout","time":252.206920139,"data":"10:33:56 | INFO    | [S13] START Camera-spectrometer agreement and repeatability (O5, T2)\n"}
+,{"stream_name":"stdout","time":253.97887272,"data":"10:33:58 | INFO    | Agreement (participant level): pooled bias -29.2%, LoA -46.8..-11.6%\n"}
+,{"stream_name":"stdout","time":254.003472513,"data":"10:33:58 | INFO    | [S13] DONE in 1.8 s | RSS 958 MB | peak 1019 MB\n"}
+,{"stream_name":"stdout","time":254.288033666,"data":"10:33:58 | INFO    | [S14] START Occlusion-state models (T1a/T1b/T1d), H2, gated temporal models\n"}
+,{"stream_name":"stdout","time":255.529447984,"data":"10:34:00 | INFO    | Windows: 4,404 ({'subject_01': 2508, 'subject_02': 1896}); features 164\n"}
+,{"stream_name":"stdout","time":255.60104232,"data":"10:34:00 | INFO    | S14 smoke test passed (251 windows, in-sample bal_acc 0.62)\n"}
+,{"stream_name":"stdout","time":255.607156264,"data":"10:34:00 | INFO    | S14 classical: 176 experiments (0 already done)\n"}
+,{"stream_name":"stdout","time":266.961490418,"data":"10:34:11 | INFO    |   classical 10/176 | 11 s | RSS 932 MB\n"}
+,{"stream_name":"stdout","time":316.74701332,"data":"10:35:01 | INFO    |   classical 20/176 | 61 s | RSS 954 MB\n"}
+,{"stream_name":"stdout","time":328.589130065,"data":"10:35:13 | INFO    |   classical 30/176 | 73 s | RSS 954 MB\n"}
+,{"stream_name":"stdout","time":339.041834847,"data":"10:35:23 | INFO    |   classical 40/176 | 83 s | RSS 954 MB\n"}
+,{"stream_name":"stdout","time":374.884985201,"data":"10:35:59 | INFO    |   classical 50/176 | 119 s | RSS 954 MB\n"}
+,{"stream_name":"stdout","time":403.392112458,"data":"10:36:28 | INFO    |   classical 60/176 | 148 s | RSS 954 MB\n"}
+,{"stream_name":"stdout","time":415.943822144,"data":"10:36:40 | INFO    |   classical 70/176 | 160 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":471.948721044,"data":"10:37:36 | INFO    |   classical 80/176 | 216 s | RSS 957 MB\n"}
+,{"stream_name":"stdout","time":484.408367754,"data":"10:37:49 | INFO    |   classical 90/176 | 229 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":517.214164032,"data":"10:38:21 | INFO    |   classical 100/176 | 262 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":523.659144676,"data":"10:38:28 | INFO    |   classical 110/176 | 268 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":529.384550993,"data":"10:38:34 | INFO    |   classical 120/176 | 274 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":535.557334247,"data":"10:38:40 | INFO    |   classical 130/176 | 280 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":577.783308816,"data":"10:39:22 | INFO    |   classical 140/176 | 322 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":583.302651839,"data":"10:39:27 | INFO    |   classical 150/176 | 328 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":590.303512759,"data":"10:39:34 | INFO    |   classical 160/176 | 335 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":675.180322378,"data":"10:40:59 | INFO    |   classical 170/176 | 420 s | RSS 955 MB\n"}
+,{"stream_name":"stdout","time":1698.895812319,"data":"10:58:03 | INFO    |   temporal temporal|cls|tcn|subject_01|subject_02|0: bal_acc=0.472 (9 s)\n"}
+,{"stream_name":"stdout","time":1711.946217032,"data":"10:58:16 | INFO    |   temporal temporal|cls|tcn|subject_01|subject_02|1: bal_acc=0.419 (13 s)\n"}
+,{"stream_name":"stdout","time":1732.933120421,"data":"10:58:37 | INFO    |   temporal temporal|cls|tcn|subject_01|subject_02|2: bal_acc=0.419 (21 s)\n"}
+,{"stream_name":"stdout","time":1765.656260821,"data":"10:59:10 | INFO    |   temporal temporal|cls|gru|subject_01|subject_02|0: bal_acc=0.475 (31 s)\n"}
+,{"stream_name":"stdout","time":1781.554437542,"data":"10:59:26 | INFO    |   temporal temporal|cls|gru|subject_01|subject_02|1: bal_acc=0.556 (16 s)\n"}
+,{"stream_name":"stdout","time":1808.765194991,"data":"10:59:53 | INFO    |   temporal temporal|cls|gru|subject_01|subject_02|2: bal_acc=0.454 (27 s)\n"}
+,{"stream_name":"stdout","time":1819.072831256,"data":"11:00:03 | INFO    |   temporal temporal|cls|tcn|subject_02|subject_01|0: bal_acc=0.423 (8 s)\n"}
+,{"stream_name":"stdout","time":1830.217530806,"data":"11:00:14 | INFO    |   temporal temporal|cls|tcn|subject_02|subject_01|1: bal_acc=0.435 (11 s)\n"}
+,{"stream_name":"stdout","time":1841.523656402,"data":"11:00:26 | INFO    |   temporal temporal|cls|tcn|subject_02|subject_01|2: bal_acc=0.406 (11 s)\n"}
+,{"stream_name":"stdout","time":1857.4303015,"data":"11:00:42 | INFO    |   temporal temporal|cls|gru|subject_02|subject_01|0: bal_acc=0.447 (14 s)\n"}
+,{"stream_name":"stdout","time":1876.234285172,"data":"11:01:00 | INFO    |   temporal temporal|cls|gru|subject_02|subject_01|1: bal_acc=0.448 (19 s)\n"}
+,{"stream_name":"stdout","time":1895.851982895,"data":"11:01:20 | INFO    |   temporal temporal|cls|gru|subject_02|subject_01|2: bal_acc=0.439 (20 s)\n"}
+,{"stream_name":"stdout","time":1899.853222339,"data":"11:01:24 | INFO    |   temporal temporal|reg|tcn|subject_01|subject_02|0: rmse=63.732 (2 s)\n"}
+,{"stream_name":"stdout","time":1905.675621288,"data":"11:01:30 | INFO    |   temporal temporal|reg|tcn|subject_01|subject_02|1: rmse=160.174 (6 s)\n"}
+,{"stream_name":"stdout","time":1912.020592032,"data":"11:01:36 | INFO    |   temporal temporal|reg|tcn|subject_01|subject_02|2: rmse=102.566 (6 s)\n"}
+,{"stream_name":"stdout","time":1930.276508729,"data":"11:01:54 | INFO    |   temporal temporal|reg|gru|subject_01|subject_02|0: rmse=54.106 (17 s)\n"}
+,{"stream_name":"stdout","time":1933.446659005,"data":"11:01:58 | INFO    |   temporal temporal|reg|gru|subject_01|subject_02|1: rmse=68.351 (3 s)\n"}
+,{"stream_name":"stdout","time":1949.027168035,"data":"11:02:13 | INFO    |   temporal temporal|reg|gru|subject_01|subject_02|2: rmse=44.211 (16 s)\n"}
+,{"stream_name":"stdout","time":1951.607090523,"data":"11:02:16 | INFO    |   temporal temporal|reg|tcn|subject_02|subject_01|0: rmse=45.338 (2 s)\n"}
+,{"stream_name":"stdout","time":1954.145045,"data":"11:02:18 | INFO    |   temporal temporal|reg|tcn|subject_02|subject_01|1: rmse=83.450 (3 s)\n"}
+,{"stream_name":"stdout","time":1956.082629841,"data":"11:02:20 | INFO    |   temporal temporal|reg|tcn|subject_02|subject_01|2: rmse=41.891 (2 s)\n"}
+,{"stream_name":"stdout","time":1960.748295071,"data":"11:02:25 | INFO    |   temporal temporal|reg|gru|subject_02|subject_01|0: rmse=54.313 (4 s)\n"}
+,{"stream_name":"stdout","time":1963.550295812,"data":"11:02:28 | INFO    |   temporal temporal|reg|gru|subject_02|subject_01|1: rmse=39.448 (3 s)\n"}
+,{"stream_name":"stdout","time":1971.902582444,"data":"11:02:36 | INFO    |   temporal temporal|reg|gru|subject_02|subject_01|2: rmse=42.110 (8 s)\n"}
+,{"stream_name":"stdout","time":1974.012427681,"data":"11:02:38 | INFO    | H2: camera ratio\u003craw in both directions=True; T1d Wilcoxon p=0.7217; H2 supported=False\n"}
+,{"stream_name":"stdout","time":1974.053421689,"data":"11:02:38 | INFO    | [S14] DONE in 1719.8 s | RSS 1069 MB | peak 1254 MB\n"}
+,{"stream_name":"stdout","time":1974.442784948,"data":"11:02:39 | INFO    | Report: /kaggle/working/pmhm_outputs/full/reports/PMHM_report_full_20261120_103011.md\n"}
+,{"stream_name":"stdout","time":1974.444928147,"data":"11:02:39 | INFO    | Finished in 1946 s. Outputs in /kaggle/working/pmhm_outputs/full\n"}
+,{"stream_name":"stdout","time":1974.45850826,"data":"    status                                                            title seconds  rss_mb peak_rss_mb\n"}
+,{"stream_name":"stdout","time":1974.458542909,"data":"S0    done                                     Environment and run manifest     0.0   648.0       663.4\n"}
+,{"stream_name":"stdout","time":1974.458550363,"data":"S1    done                     Data access layer, contract and golden tests     2.8   804.6       810.9\n"}
+,{"stream_name":"stdout","time":1974.458571549,"data":"S2    done                   Analysis plan frozen before confirmatory steps     0.0   804.6       810.9\n"}
+,{"stream_name":"stdout","time":1974.458577257,"data":"S3    done                                  Quality control and frame flags     0.3   805.7       810.9\n"}
+,{"stream_name":"stdout","time":1974.458581882,"data":"S4    done                                            Dark offset scenarios     1.1   805.1       851.8\n"}
+,{"stream_name":"stdout","time":1974.45858618,"data":"S5    done                             Spectrometer-to-camera forward model     1.6   763.8       859.7\n"}
+,{"stream_name":"stdout","time":1974.458590273,"data":"S6    done    Relative reflectance and spectrometer-anchored effective gain     0.2   763.9       859.7\n"}
+,{"stream_name":"stdout","time":1974.458594525,"data":"S7    done                  Cross-talk characterisation and LOPO correction     2.5   764.1       859.7\n"}
+,{"stream_name":"stdout","time":1974.458598866,"data":"S8    done                   Frame-level features (camera and spectrometer)     3.1   823.4      1018.7\n"}
+,{"stream_name":"stdout","time":1974.458603949,"data":"S9    done              Block-level features and smallest detectable change     9.1   845.3      1018.7\n"}
+,{"stream_name":"stdout","time":1974.458608511,"data":"S10   done             Dose-response and H1 (camera arm + spectrometer arm)     2.8   858.6      1018.7\n"}
+,{"stream_name":"stdout","time":1974.458613269,"data":"S11   done                                          Recovery kinetics (RQ2)   194.9   919.4      1018.7\n"}
+,{"stream_name":"stdout","time":1974.458617603,"data":"S12   done                                  Feature-family robustness (RQ3)     1.6   957.7      1018.7\n"}
+,{"stream_name":"stdout","time":1974.458622137,"data":"S13   done         Camera-spectrometer agreement and repeatability (O5, T2)     1.8   957.8      1018.7\n"}
+,{"stream_name":"stdout","time":1974.45862712,"data":"S14   done  Occlusion-state models (T1a/T1b/T1d), H2, gated temporal models  1719.8  1069.4      1253.6\n"}
+,{"stream_name":"stderr","time":1979.206166791,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1979.206205402,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1979.397732311,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1979.397759781,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1980.3371044,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1980.440988494,"data":"[NbConvertApp] Writing 178372 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1983.564106245,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1985.07773294,"data":"[NbConvertApp] Writing 1147082 bytes to __results__.html\n"}
+]

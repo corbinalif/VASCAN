@@ -1,0 +1,5 @@
+family,better_than_raw,worse_than_raw,robust
+l1,3,0,True
+mbll,2,0,True
+ratio,3,0,True
+rel,1,1,False

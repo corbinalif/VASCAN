@@ -127,6 +127,9 @@ The repository follows the phases of the [implementation plan](docs/PMHM_Impleme
 
 Phases A–E all run from the one notebook, [`phase_A-E_analysis/pmhm_phase_a_e.ipynb`](phase_A-E_analysis/pmhm_phase_a_e.ipynb).
 
+> [!TIP]
+> **Full results report:** [`PMHM_Phase_A-E_Results.pdf`](phase_A-E_analysis/PMHM_Phase_A-E_Results.pdf), 19 pages covering every step from S0 to S14, with all tables and figures.
+
 ## The protocol
 
 Each volunteer sat with the right palm under the camera for about 18 minutes. After a two-minute baseline, a cuff on the upper arm was inflated in 20 mmHg steps up to 160 mmHg. Each step lasted about a minute and was followed by a minute at zero pressure. That gives 17 blocks per session (r1–r8 below are the rest periods).

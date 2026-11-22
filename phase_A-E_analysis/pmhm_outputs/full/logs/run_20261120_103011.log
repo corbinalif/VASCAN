@@ -1,0 +1,126 @@
+10:30:11 | INFO    | PMHM Phase A–E pipeline pmhm-phase-a-e-1.0 | env=kaggle | mode=full | profile=M | device=cpu | RAM total=32099 MB avail=30740 MB | out=/kaggle/working/pmhm_outputs/full
+10:30:11 | WARNING | Configured data path not found: /kaggle/input/spectralpaca-pmhm/spectralpaca_pmhm_dataset.parquet. Searching under /kaggle/input ...
+10:30:13 | INFO    | Dataset OK: /kaggle/input/datasets/<kaggle-user>/spectralpaca-pmhm/spectralpaca_pmhm_dataset.parquet | 56.58 MB | 4,586,255 rows | 81 columns | sha256 eb77b66a76f2…
+10:30:13 | INFO    | Record types: camera_filter=9,616, channel=16, color_checker=3,840, frame=48,157, light_source=2,033, roi_frame=125,323, spectrometer=4,397,250, stage=10, subject=10
+10:30:13 | INFO    | [S0] START Environment and run manifest
+10:30:13 | INFO    | [S0] DONE in 0.0 s | RSS 648 MB | peak 663 MB
+10:30:13 | INFO    | [S1] START Data access layer, contract and golden tests
+10:30:16 | INFO    | Contract/golden tests: 19/19 passed
+10:30:16 | INFO    | [S1] DONE in 2.8 s | RSS 805 MB | peak 811 MB
+10:30:16 | INFO    | [S2] START Analysis plan frozen before confirmatory steps
+10:30:16 | WARNING | PLAN_SIGNED_OFF=False: confirmatory results (S10-S14) will be labelled 'plan not signed off'
+10:30:16 | INFO    | [S2] DONE in 0.0 s | RSS 805 MB | peak 811 MB
+10:30:16 | INFO    | [S3] START Quality control and frame flags
+10:30:17 | INFO    | QC: gaps=4, stage agreement=1.0000, post-video rows=1796, disp-flagged=988, saturated ROIs=0
+10:30:17 | INFO    | [S3] DONE in 0.3 s | RSS 806 MB | peak 811 MB
+10:30:17 | INFO    | [S4] START Dark offset scenarios
+10:30:18 | INFO    | Dark scenarios: sign flips in 0 subject-pressure cells; max spread 0.01018
+10:30:18 | INFO    | [S4] DONE in 1.1 s | RSS 805 MB | peak 852 MB
+10:30:18 | INFO    | [S5] START Spectrometer-to-camera forward model
+10:30:20 | INFO    | Forward model: max truncation 0.0029; negatives in support 4540; extinction design condition number 99.8
+10:30:20 | INFO    | [S5] DONE in 1.6 s | RSS 764 MB | peak 860 MB
+10:30:20 | INFO    | [S6] START Relative reflectance and spectrometer-anchored effective gain
+10:30:20 | INFO    | Gain model: bands within 15% per direction = [16, 16]; absolute calibration adopted=True
+10:30:20 | INFO    | [S6] DONE in 0.2 s | RSS 764 MB | peak 860 MB
+10:30:21 | INFO    | [S7] START Cross-talk characterisation and LOPO correction
+10:30:23 | INFO    | Cross-talk: improved in 10/10 folds; neutral patches pass=False; adopted as sensitivity variant=False
+10:30:23 | INFO    | [S7] DONE in 2.5 s | RSS 764 MB | peak 860 MB
+10:30:23 | INFO    | [S8] START Frame-level features (camera and spectrometer)
+10:30:25 | INFO    | Frame features: 158,844 rows x 82 features; spectrometer features (7995, 87)
+10:30:27 | INFO    | [S8] DONE in 3.1 s | RSS 823 MB | peak 1019 MB
+10:30:27 | INFO    | [S9] START Block-level features and smallest detectable change
+10:30:36 | INFO    | Block stats: 369 windows (0 invalid); deltas 360; kinetics 720
+10:30:36 | INFO    | [S9] DONE in 9.1 s | RSS 845 MB | peak 1019 MB
+10:30:36 | INFO    | [S10] START Dose-response and H1 (camera arm + spectrometer arm)
+/usr/local/lib/python3.13/dist-packages/statsmodels/regression/mixed_linear_model.py:2384: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  rslt = super().fit(
+
+/tmp/ipykernel_16/1979829914.py:1608: ConvergenceWarning: Retrying MixedLM optimization with lbfgs
+  res = smf.mixedlm("y ~ C(pressure) + C(subject_id)", dd, groups=dd["g"]).fit(reml=True)
+
+/usr/local/lib/python3.13/dist-packages/statsmodels/regression/mixed_linear_model.py:2384: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  rslt = super().fit(
+
+/tmp/ipykernel_16/1979829914.py:1608: ConvergenceWarning: Retrying MixedLM optimization with cg
+  res = smf.mixedlm("y ~ C(pressure) + C(subject_id)", dd, groups=dd["g"]).fit(reml=True)
+
+/usr/local/lib/python3.13/dist-packages/statsmodels/regression/mixed_linear_model.py:2384: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  rslt = super().fit(
+
+/tmp/ipykernel_16/1979829914.py:1608: ConvergenceWarning: MixedLM optimization failed, trying a different optimizer may help.
+  res = smf.mixedlm("y ~ C(pressure) + C(subject_id)", dd, groups=dd["g"]).fit(reml=True)
+
+/tmp/ipykernel_16/1979829914.py:1608: ConvergenceWarning: Gradient optimization failed, |grad| = 0.680241
+  res = smf.mixedlm("y ~ C(pressure) + C(subject_id)", dd, groups=dd["g"]).fit(reml=True)
+
+/tmp/ipykernel_16/1979829914.py:1608: ConvergenceWarning: The MLE may be on the boundary of the parameter space.
+  res = smf.mixedlm("y ~ C(pressure) + C(subject_id)", dd, groups=dd["g"]).fit(reml=True)
+
+/tmp/ipykernel_16/1979829914.py:1626: ConvergenceWarning: The MLE may be on the boundary of the parameter space.
+  vc_formula={"roi": "0 + C(r)"}).fit(reml=True)
+
+10:30:39 | INFO    | H1: camera supported in 0/2; spectrometer p=0.2461, CI=(-0.027574793522389833, 0.027165182411801696); overall=not supported
+10:30:39 | INFO    | Exploratory (not pre-specified): pressure of largest local decrease per participant: subject_01=100 mmHg, subject_02=120 mmHg
+10:30:39 | INFO    | [S10] DONE in 2.8 s | RSS 859 MB | peak 1019 MB
+10:30:39 | INFO    | [S11] START Recovery kinetics (RQ2)
+10:33:54 | INFO    | RQ2: accepted fit share 0.43 (model-based=False); dependence={'overshoot': False, 't_half': False}
+10:33:54 | INFO    | [S11] DONE in 194.9 s | RSS 919 MB | peak 1019 MB
+10:33:55 | INFO    | [S12] START Feature-family robustness (RQ3)
+10:33:56 | INFO    | RQ3 robust families: l1, mbll, ratio
+10:33:56 | INFO    | [S12] DONE in 1.6 s | RSS 958 MB | peak 1019 MB
+10:33:56 | INFO    | [S13] START Camera-spectrometer agreement and repeatability (O5, T2)
+10:33:58 | INFO    | Agreement (participant level): pooled bias -29.2%, LoA -46.8..-11.6%
+10:33:58 | INFO    | [S13] DONE in 1.8 s | RSS 958 MB | peak 1019 MB
+10:33:58 | INFO    | [S14] START Occlusion-state models (T1a/T1b/T1d), H2, gated temporal models
+10:34:00 | INFO    | Windows: 4,404 ({'subject_01': 2508, 'subject_02': 1896}); features 164
+10:34:00 | INFO    | S14 smoke test passed (251 windows, in-sample bal_acc 0.62)
+10:34:00 | INFO    | S14 classical: 176 experiments (0 already done)
+10:34:11 | INFO    |   classical 10/176 | 11 s | RSS 932 MB
+10:35:01 | INFO    |   classical 20/176 | 61 s | RSS 954 MB
+10:35:13 | INFO    |   classical 30/176 | 73 s | RSS 954 MB
+10:35:23 | INFO    |   classical 40/176 | 83 s | RSS 954 MB
+10:35:59 | INFO    |   classical 50/176 | 119 s | RSS 954 MB
+10:36:28 | INFO    |   classical 60/176 | 148 s | RSS 954 MB
+10:36:40 | INFO    |   classical 70/176 | 160 s | RSS 955 MB
+10:37:36 | INFO    |   classical 80/176 | 216 s | RSS 957 MB
+10:37:49 | INFO    |   classical 90/176 | 229 s | RSS 955 MB
+10:38:21 | INFO    |   classical 100/176 | 262 s | RSS 955 MB
+10:38:28 | INFO    |   classical 110/176 | 268 s | RSS 955 MB
+10:38:34 | INFO    |   classical 120/176 | 274 s | RSS 955 MB
+10:38:40 | INFO    |   classical 130/176 | 280 s | RSS 955 MB
+10:39:22 | INFO    |   classical 140/176 | 322 s | RSS 955 MB
+10:39:27 | INFO    |   classical 150/176 | 328 s | RSS 955 MB
+10:39:34 | INFO    |   classical 160/176 | 335 s | RSS 955 MB
+10:40:59 | INFO    |   classical 170/176 | 420 s | RSS 955 MB
+/tmp/ipykernel_16/1979829914.py:2341: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  tl += float(loss) * len(j)
+
+10:58:03 | INFO    |   temporal temporal|cls|tcn|subject_01|subject_02|0: bal_acc=0.472 (9 s)
+10:58:16 | INFO    |   temporal temporal|cls|tcn|subject_01|subject_02|1: bal_acc=0.419 (13 s)
+10:58:37 | INFO    |   temporal temporal|cls|tcn|subject_01|subject_02|2: bal_acc=0.419 (21 s)
+10:59:10 | INFO    |   temporal temporal|cls|gru|subject_01|subject_02|0: bal_acc=0.475 (31 s)
+10:59:26 | INFO    |   temporal temporal|cls|gru|subject_01|subject_02|1: bal_acc=0.556 (16 s)
+10:59:53 | INFO    |   temporal temporal|cls|gru|subject_01|subject_02|2: bal_acc=0.454 (27 s)
+11:00:03 | INFO    |   temporal temporal|cls|tcn|subject_02|subject_01|0: bal_acc=0.423 (8 s)
+11:00:14 | INFO    |   temporal temporal|cls|tcn|subject_02|subject_01|1: bal_acc=0.435 (11 s)
+11:00:26 | INFO    |   temporal temporal|cls|tcn|subject_02|subject_01|2: bal_acc=0.406 (11 s)
+11:00:42 | INFO    |   temporal temporal|cls|gru|subject_02|subject_01|0: bal_acc=0.447 (14 s)
+11:01:00 | INFO    |   temporal temporal|cls|gru|subject_02|subject_01|1: bal_acc=0.448 (19 s)
+11:01:20 | INFO    |   temporal temporal|cls|gru|subject_02|subject_01|2: bal_acc=0.439 (20 s)
+11:01:24 | INFO    |   temporal temporal|reg|tcn|subject_01|subject_02|0: rmse=63.732 (2 s)
+11:01:30 | INFO    |   temporal temporal|reg|tcn|subject_01|subject_02|1: rmse=160.174 (6 s)
+11:01:36 | INFO    |   temporal temporal|reg|tcn|subject_01|subject_02|2: rmse=102.566 (6 s)
+11:01:54 | INFO    |   temporal temporal|reg|gru|subject_01|subject_02|0: rmse=54.106 (17 s)
+11:01:58 | INFO    |   temporal temporal|reg|gru|subject_01|subject_02|1: rmse=68.351 (3 s)
+11:02:13 | INFO    |   temporal temporal|reg|gru|subject_01|subject_02|2: rmse=44.211 (16 s)
+11:02:16 | INFO    |   temporal temporal|reg|tcn|subject_02|subject_01|0: rmse=45.338 (2 s)
+11:02:18 | INFO    |   temporal temporal|reg|tcn|subject_02|subject_01|1: rmse=83.450 (3 s)
+11:02:20 | INFO    |   temporal temporal|reg|tcn|subject_02|subject_01|2: rmse=41.891 (2 s)
+11:02:25 | INFO    |   temporal temporal|reg|gru|subject_02|subject_01|0: rmse=54.313 (4 s)
+11:02:28 | INFO    |   temporal temporal|reg|gru|subject_02|subject_01|1: rmse=39.448 (3 s)
+11:02:36 | INFO    |   temporal temporal|reg|gru|subject_02|subject_01|2: rmse=42.110 (8 s)
+11:02:38 | INFO    | H2: camera ratio<raw in both directions=True; T1d Wilcoxon p=0.7217; H2 supported=False
+11:02:38 | INFO    | [S14] DONE in 1719.8 s | RSS 1069 MB | peak 1254 MB
+11:02:39 | INFO    | Report: /kaggle/working/pmhm_outputs/full/reports/PMHM_report_full_20261120_103011.md
+11:02:39 | INFO    | Finished in 1946 s. Outputs in /kaggle/working/pmhm_outputs/full

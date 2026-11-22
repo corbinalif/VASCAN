@@ -1,0 +1,286 @@
+{
+  "code": "pmhm-phase-a-e-1.0",
+  "timestamp": "20261120_103011",
+  "env": "kaggle",
+  "mode": "full",
+  "profile": "M",
+  "device": "cpu",
+  "config_hash": "d8ad47825b11ec17",
+  "data": {
+    "path": "/kaggle/input/datasets/<kaggle-user>/spectralpaca-pmhm/spectralpaca_pmhm_dataset.parquet",
+    "size_mb": 56.58,
+    "rows": 4586255,
+    "row_groups": 96,
+    "columns": 81,
+    "record_counts": {
+      "roi_frame": 125323,
+      "frame": 48157,
+      "spectrometer": 4397250,
+      "camera_filter": 9616,
+      "light_source": 2033,
+      "color_checker": 3840,
+      "channel": 16,
+      "stage": 10,
+      "subject": 10
+    },
+    "sha256": "eb77b66a76f27eab5a053fe564954d9fe4ef584423f1053cb46542ac38961226"
+  },
+  "plan_signed_off": false,
+  "steps": {
+    "S0": {
+      "status": "done",
+      "title": "Environment and run manifest",
+      "seconds": 0.0,
+      "rss_mb": 648.0,
+      "peak_rss_mb": 663.4
+    },
+    "S1": {
+      "status": "done",
+      "title": "Data access layer, contract and golden tests",
+      "seconds": 2.8,
+      "rss_mb": 804.6,
+      "peak_rss_mb": 810.9
+    },
+    "S2": {
+      "status": "done",
+      "title": "Analysis plan frozen before confirmatory steps",
+      "seconds": 0.0,
+      "rss_mb": 804.6,
+      "peak_rss_mb": 810.9
+    },
+    "S3": {
+      "status": "done",
+      "title": "Quality control and frame flags",
+      "seconds": 0.3,
+      "rss_mb": 805.7,
+      "peak_rss_mb": 810.9
+    },
+    "S4": {
+      "status": "done",
+      "title": "Dark offset scenarios",
+      "seconds": 1.1,
+      "rss_mb": 805.1,
+      "peak_rss_mb": 851.8
+    },
+    "S5": {
+      "status": "done",
+      "title": "Spectrometer-to-camera forward model",
+      "seconds": 1.6,
+      "rss_mb": 763.8,
+      "peak_rss_mb": 859.7
+    },
+    "S6": {
+      "status": "done",
+      "title": "Relative reflectance and spectrometer-anchored effective gain",
+      "seconds": 0.2,
+      "rss_mb": 763.9,
+      "peak_rss_mb": 859.7
+    },
+    "S7": {
+      "status": "done",
+      "title": "Cross-talk characterisation and LOPO correction",
+      "seconds": 2.5,
+      "rss_mb": 764.1,
+      "peak_rss_mb": 859.7
+    },
+    "S8": {
+      "status": "done",
+      "title": "Frame-level features (camera and spectrometer)",
+      "seconds": 3.1,
+      "rss_mb": 823.4,
+      "peak_rss_mb": 1018.7
+    },
+    "S9": {
+      "status": "done",
+      "title": "Block-level features and smallest detectable change",
+      "seconds": 9.1,
+      "rss_mb": 845.3,
+      "peak_rss_mb": 1018.7
+    },
+    "S10": {
+      "status": "done",
+      "title": "Dose-response and H1 (camera arm + spectrometer arm)",
+      "seconds": 2.8,
+      "rss_mb": 858.6,
+      "peak_rss_mb": 1018.7
+    },
+    "S11": {
+      "status": "done",
+      "title": "Recovery kinetics (RQ2)",
+      "seconds": 194.9,
+      "rss_mb": 919.4,
+      "peak_rss_mb": 1018.7
+    },
+    "S12": {
+      "status": "done",
+      "title": "Feature-family robustness (RQ3)",
+      "seconds": 1.6,
+      "rss_mb": 957.7,
+      "peak_rss_mb": 1018.7
+    },
+    "S13": {
+      "status": "done",
+      "title": "Camera-spectrometer agreement and repeatability (O5, T2)",
+      "seconds": 1.8,
+      "rss_mb": 957.8,
+      "peak_rss_mb": 1018.7
+    },
+    "S14": {
+      "status": "done",
+      "title": "Occlusion-state models (T1a/T1b/T1d), H2, gated temporal models",
+      "seconds": 1719.8,
+      "rss_mb": 1069.4,
+      "peak_rss_mb": 1253.6
+    }
+  },
+  "figures": [
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s05_band_weights.png",
+      "caption": "Effective camera band weights (filter response \u00d7 xenon irradiance) on the spectrometer grid."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s07_crosstalk_lopo.png",
+      "caption": "Cross-talk correction under leave-one-participant-out: mean spectral angle between simulated full-filter and main-lobe band values, before and after correction."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s10_ratio_timecourse.png",
+      "caption": "ROI-mean 550/609 nm ratio relative to baseline (2 s rolling median); shading = cuff inflation with pressure (mmHg)."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s10_dose_response.png",
+      "caption": "Local change of the ROI-mean 550/609 ratio per clamping stage, placebo differences between consecutive rest references, and \u00b1SDC95 bands (shaded)."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s10_spectrometer_arm.png",
+      "caption": "Spectrometer arm of H1: participant means of the simulated camera-band log ratio at baseline and 160 mmHg (n = 10); blue = group mean."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s11_recovery_fits.png",
+      "caption": "Mono-exponential recovery fits in the eight rest blocks (subject_01, ROI mean)."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s13_bland_altman.png",
+      "caption": "Bland\u2013Altman plot of per-band relative change at 160 mmHg (participant level; colour = band); lines = pooled bias and 95% limits of agreement (repeated-measures method)."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s14_benchmark_v2.png",
+      "caption": "Cross-participant phase classification (T1a): balanced accuracy with moving-block bootstrap 95% CIs; dotted = shuffled-label null; solid grey = chance (1/3)."
+    },
+    {
+      "file": "/kaggle/working/pmhm_outputs/full/figures/s14_confusion_best.png",
+      "caption": "Row-normalised confusion matrix of the best cross-participant phase model (mbll \u00b7 logreg_pca, train 01 \u2192 test 02)."
+    }
+  ],
+  "outputs": "/kaggle/working/pmhm_outputs/full",
+  "S1": {
+    "n_tests": 19,
+    "n_passed": 19,
+    "spectro_rise_pct": [
+      16.318750381469727,
+      30.1084041595459
+    ],
+    "spectro_rise_median_pct": 20.8404541015625,
+    "proposal_erratum": "Proposal v1.0 section 5.4 states an 18-22% rise across 500-650 nm; the file gives 16.3-30.1% (median 20.8%)."
+  },
+  "S3": {
+    "stage_agreement": 1.0,
+    "n_gaps": 4,
+    "post_video_rows": 1796
+  },
+  "S4": {
+    "sign_flips": 0,
+    "max_spread": 0.010178565979003906,
+    "primary": "D1",
+    "robust": true
+  },
+  "S5": {
+    "tests": {
+      "flat_equal": true,
+      "linear": true,
+      "truncation_below_1pct": true
+    },
+    "n_negative": 14705,
+    "negative_in_support": 4540,
+    "filter_duplicates": 320,
+    "mbll_condition": 99.79614337677084,
+    "max_truncation": 0.0029170151246317366
+  },
+  "S6": {
+    "adopt_absolute": true,
+    "bands_within_tol": [
+      16,
+      16
+    ]
+  },
+  "S7": {
+    "folds_improved": 10,
+    "neutral_pass": false,
+    "adopt_variant": false,
+    "alpha": 1e-08
+  },
+  "S10": {
+    "h1": "not supported",
+    "camera_supported": 0,
+    "spectro_p": 0.24609375,
+    "spectro_ci": [
+      -0.027574793522389833,
+      0.027165182411801696
+    ],
+    "spectro_mean_diff": -0.0030607813528887307,
+    "spectro_supported": false,
+    "spectro_lmm": {
+      "model": "random intercept + random stage slope per participant; ROI variance component",
+      "estimate": -0.003070069976050984,
+      "se": 0.01498173950789652,
+      "p": 0.837634007620381,
+      "converged": true
+    },
+    "signed_off": false,
+    "note": "camera arm non-confirmatory (hypothesis-generating data)"
+  },
+  "S11": {
+    "accepted_share": 0.42857142857142855,
+    "model_based": false,
+    "dependence": {
+      "overshoot": false,
+      "t_half": false
+    },
+    "incomplete_recovery": {
+      "subject_01": "5/5 evaluable blocks",
+      "subject_02": "5/6 evaluable blocks"
+    }
+  },
+  "S12": {
+    "robust_families": [
+      "l1",
+      "mbll",
+      "ratio"
+    ],
+    "variants": [
+      "D0",
+      "D2"
+    ],
+    "note": "processing_sensitivity is undefined for raw counts (no dark subtraction is applied to them) and is excluded from comparisons with raw; between_participant_cv is undefined for baseline-referenced families (rel, mbll). Implementation note added after the first test run, before any confirmatory run."
+  },
+  "S13": {
+    "primary_level": "participant",
+    "roi_correspondence_confirmed": false,
+    "absolute_used": true,
+    "note": "ROI-level results are conditional on ROI correspondence"
+  },
+  "S14": {
+    "n_windows": 4404,
+    "h2": false,
+    "h2_camera": true,
+    "h2_t1d_p": 0.7216796875,
+    "h2_t1d_mean_diff": 0.028288316582914586,
+    "drift_flags": 0,
+    "temporal_better": 0,
+    "temporal_run": true,
+    "best_v2": {
+      "feature_set": "mbll",
+      "model": "logreg_pca",
+      "bal_acc": 0.6201665483765421
+    }
+  }
+}

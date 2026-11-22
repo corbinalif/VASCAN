@@ -1,0 +1,5 @@
+subject_id,metric,rho,p,p_holm
+subject_01,t_half,,,
+subject_01,overshoot,0.5768179036829705,0.25,0.25
+subject_02,t_half,0.0,1.0,1.0
+subject_02,overshoot,0.6375355777548621,0.2,0.4
