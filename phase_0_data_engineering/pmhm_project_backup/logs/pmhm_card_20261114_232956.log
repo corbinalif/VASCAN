@@ -1,3 +1,0 @@
-2026-11-14 23:29:56,941 INFO pmhm.cli: start card | resources {'ram_available_mb': 2490.9, 'ram_used_pct': 68.1, 'swap_used_mb': 5027.9, 'process_rss_mb': 21.5, 'disk_free_gb': 207.6} | log /home/alifhossain/SPECTRALPACA/logs/pmhm_card_20261114_232956.log
-2026-11-14 23:29:57,772 INFO pmhm.cli: dataset card + data dictionary written to docs/
-2026-11-14 23:29:57,773 INFO pmhm.cli: end card | resources {'ram_available_mb': 2242.4, 'ram_used_pct': 71.3, 'swap_used_mb': 5022.2, 'process_rss_mb': 350.2, 'disk_free_gb': 207.6}
